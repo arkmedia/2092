@@ -7,10 +7,75 @@
 <!-- jQuery Mobile CSS -->
 <link rel="stylesheet" href="js/libs/jQM/jquery.mobile-1.4.0-alpha.2.min.css" />
 
+<!-- Project CSS -->
+<link rel="stylesheet" href="css/style.css" />
+
 
 </head>
 
 <body>
+<div id="universalFooter" class="universalFooter">
+	<div class="home-btn-containter">
+    	<span>Button here</span>
+    </div>
+    <div class="footer-title">
+    	<span>Title here</span>
+    </div>
+    <div class="footer-items">
+    	<ul>
+        	<li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <div class="footer-nav">
+    	<div class="footer-nav-menu">
+        	<table>
+            	<tr>
+                	<td class="footer-table-nav-btn footer-table-nav-btn-right"><a href="#" class="footer-btn footer-prev-btn">Button</a></td>
+                    <td class="footer-table-nav-title"><span>Title</span></td>
+                    <td class="footer-table-nav-btn footer-table-nav-btn-left"><a href="#sub_menu_2" class="footer-btn footer-next-btn">Button</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-nav-sub-menu">
+        	<table class="footer-nav-sub-menu-container">
+            	<tr>
+                	<td id="sub_menu_1" class="footer-nav-sub-menu-item">
+                    	<ul>
+                   			<li><a href="#sub_menu_2" class="rhem">Item 1a</a></li>
+                    		<li>Item 2a</li>
+                    		<li>Item 3a</li>
+                		</ul>
+                    </td>
+                    <td id="sub_menu_2" class="footer-nav-sub-menu-item">
+                    	 <ul>
+                    		<li><a href="#sub_menu_1" class="rhem">Item 1b</a></li>
+                    		<li><a href="#sub_menu_3" class="rhem">Item 2b</a></li>
+                    		<li>Item 3b</li>
+                		</ul>
+                    </td>
+                    <td id="sub_menu_3" class="footer-nav-sub-menu-item">
+                    	<ul>
+                   			<li>Item 1c</li>
+                    		<li><a href="#sub_menu_2" class="rhem">Item 2c</a></li>
+                    		<li>Item 3c</li>
+                		</ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<div data-role="page" id="page_style_0">
+	<div data-role="content">
+    	Page 0
+    </div>
+</div>
+
+
 <!-- jQuery 2.x -->
 <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
 

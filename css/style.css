@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/********** Universal Footer styles **********/
+.universalFooter{
+	/* positioning */
+	position:fixed;
+	bottom: 0px;
+	z-index:9999;
+	text-align:center;
+	
+	/* colors */
+	background-color:#333333;
+	color:#FFF;
+	
+	/* dimensions */
+	width:100%;
+	height:50%;
+	
+	/* others */
+	overflow: hidden;
+	}
+
+.universalFooter ul{
+	list-style: none;
+	margin: 0px;
+	padding:0px;
+	} 
+
+.universalFooter .footer-nav-menu{
+	width:100%;
+	}
+
+.universalFooter .footer-nav-menu table{
+	width: 100%;
+	}
+	
+.universalFooter .footer-nav-menu table td.footer-table-nav-btn{
+	width:20%;
+	}	
+
+.universalFooter .footer-nav-menu table td.footer-table-nav-btn-left{
+	text-align: left;
+	}	
+
+.universalFooter .footer-nav-menu table td.footer-table-nav-btn-right{
+	text-align: right;
+	}	
+
+.universalFooter .footer-nav-menu table td.footer-table-nav-title{
+	width:60%;
+	text-align:center;
+	}
+
+.universalFooter div{
+	/*border-bottom: 1px solid #FFF;*/
+	} 
+
+.footer-nav-sub-menu ul{
+	}
+	
+.footer-nav-sub-menu{
+	width: 100%;
+	overflow:hidden;
+	}
+	
+.footer-nav-sub-menu .footer-nav-sub-menu-container{
+	position:absolute;
+	border-spacing:0;
+    border: none;
+	}
+
+.footer-nav-sub-menu .footer-nav-sub-menu-container td{
+
+	}
+
+.footer-nav-sub-menu .footer-nav-sub-menu-container ul{
+	width: 100%;
+	display: inline-block;
+	}
+
+.footer-nav-sub-menu .footer-nav-sub-menu-container ul li{
+	text-align: center;
+	}
