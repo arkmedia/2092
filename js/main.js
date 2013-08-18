@@ -34,7 +34,7 @@ $('#page_style_0')	.on('pagehide', function(event){
 							}						
 						});
 						
-$('a.footer-btn').on('click', function(){
+$('a.footer-btn').on('touchstart mousedown', function(){
 	var movingMenu = $('.footer-nav-sub-menu-container'),
 		numberOfMovingMenuItems = movingMenu.find('td.footer-nav-sub-menu-item').length,
 		destination = this.getAttribute('href'),
