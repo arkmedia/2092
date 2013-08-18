@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,20 +10,24 @@
 <!-- Project CSS -->
 <link rel="stylesheet" href="css/style.css" />
 
+<!-- iScroll CSS -->
+<link rel="stylesheet" href="css/jquery.mobile.iscrollview.css" />
+<link rel="stylesheet" href="css/jquery.mobile.iscrollview-pull.css" />
 
 </head>
 
 <body>
+
 <div id="universalFooter" class="universalFooter">
 	<div class="home-btn-containter slice">
-    	<a href="#front_page"><img src="images/main_menu/Bottom_Menu-Button-Menu-Active-1.png" /></a>
+    	<a href="#front_page"><img src="images/main_menu/Bottom_Menu-Button-Menu-Active-1.png" alt="Main Menu" /></a>
     </div>
     <div class="footer-title slice">
-    	<img src="images/main_menu/Bottom_Menu-GoG_Logo-Full-1.png" />
+    	<img src="images/main_menu/Bottom_Menu-GoG_Logo-Full-1.png" alt="Generations of Giving" />
     </div>
     <div class="footer-items slice">
     	<ul>
-        	<li><a href="#">President's message</a></li>
+        	<li><a href="#presidents_message">President's message</a></li>
             <li><a href="#">How You Can Make A Difference</a></li>
             <li><a href="#">St Joseph's Community foundation</a></li>
         </ul>
@@ -34,8 +38,8 @@
             	<tr>
                 	<td class="footer-table-nav-btn footer-table-nav-btn-right">
                     	<a href="#" class="footer-btn footer-prev-btn">
-                        	<img src="images/main_menu/Bottom_Menu-Button-Arrow_Left-Normal-1.png" class="normal" />
-                            <img src="images/main_menu/Bottom_Menu-Button-Arrow_Left-Active-1.png" class="active" />
+                        	<img src="images/main_menu/Bottom_Menu-Button-Arrow_Left-Normal-1.png" class="normal" alt="Previous" />
+                            <img src="images/main_menu/Bottom_Menu-Button-Arrow_Left-Active-1.png" class="active" alt="Previous" />
                         </a>
                     </td>
                     <td class="footer-table-nav-title">
@@ -43,8 +47,8 @@
                     </td>
                     <td class="footer-table-nav-btn footer-table-nav-btn-left">
                     	<a href="#sub_menu_2" class="footer-btn footer-next-btn">
-                        	<img src="images/main_menu/Bottom_Menu-Button-Arrow_Right-Normal-1.png" class="normal" />
-                            <img src="images/main_menu/Bottom_Menu-Button-Arrow_Right-Active-1.png" class="active" />
+                        	<img src="images/main_menu/Bottom_Menu-Button-Arrow_Right-Normal-1.png" class="normal" alt="Next" />
+                            <img src="images/main_menu/Bottom_Menu-Button-Arrow_Right-Active-1.png" class="active" alt="Next" />
                         </a>
                     </td>
                 </tr>
@@ -79,11 +83,60 @@
         </div>
     </div>
 </div>
-</div>
+
 
 <div data-role="page" id="front_page">
 	<div data-role="content">
     	Page 0
+    </div>
+</div>
+
+<div data-role="page" id="presidents_message" class="page_style_a">
+	<div data-role="content">
+    	<div class="title_header">
+        	<span>President's Message</span>
+        </div>
+        <div class="content">
+             <p>Bacon ipsum dolor sit amet turkey quis aute drumstick shankle. Exercitation biltong fatback reprehenderit magna. Reprehenderit labore ham hock, elit cupidatat meatloaf filet mignon quis t-bone officia commodo. Beef ribs commodo adipisicing, venison sunt eiusmod ball tip andouille sed ribeye nostrud biltong quis boudin nisi.</p>
+    
+            <p>Magna qui sirloin eu, meatloaf laborum adipisicing bacon flank. Pork anim short ribs ut doner. Nostrud ball tip nisi shankle. Short ribs pig chicken cupidatat ad sausage deserunt strip steak swine dolore shoulder esse reprehenderit venison boudin.</p>
+            
+            <p>Non sint cillum exercitation, nisi pork pork belly deserunt biltong beef et dolore aliqua shoulder mollit. Deserunt magna kielbasa andouille duis meatball. Qui beef meatball ball tip tempor ad ground round. Anim bacon qui adipisicing pancetta, aute ground round reprehenderit ribeye fatback. Bresaola duis turducken, turkey ut sausage shank beef. Ball tip tongue ground round, spare ribs in meatloaf corned beef deserunt occaecat adipisicing leberkas short loin.</p>
+            
+            <p>Pig tail strip steak swine, kielbasa sirloin rump dolor salami sausage brisket. Pork sint pork belly irure. Rump doner voluptate, ground round nostrud incididunt pariatur jowl qui bresaola dolore pork. Short loin sed in elit ullamco deserunt.</p>
+            
+            <p>Est ball tip veniam ham tail ribeye. Ball tip sirloin excepteur, veniam spare ribs magna filet mignon consectetur commodo short loin frankfurter t-bone qui sed. Chicken commodo laborum ut cupidatat drumstick et, pariatur venison pig ad tongue. Jerky consectetur bacon short ribs tongue velit pariatur pig eiusmod ad drumstick dolor.</p>
+            
+            <p>T-bone anim cillum doner pastrami, deserunt pig rump sed ullamco fatback exercitation culpa enim. T-bone elit adipisicing nisi. Doner dolor sint deserunt shankle jerky bresaola. Exercitation id ut ad magna, short ribs chicken pork shank beef meatloaf hamburger venison. Veniam ground round commodo, cupidatat laborum enim ball tip.</p>
+            
+            <p>Cillum voluptate commodo magna pork chop tenderloin turkey labore cow flank minim swine do. Ut chuck voluptate, in dolor sunt pancetta. Beef pastrami turducken culpa corned beef. Flank in mollit adipisicing brisket dolore biltong commodo jerky cillum culpa voluptate elit beef ribs. Ut strip steak cupidatat, in corned beef turkey qui brisket andouille. Brisket tri-tip labore venison ut.</p>
+            
+            <p>Brisket et flank biltong, in swine doner tri-tip eu t-bone pastrami eiusmod nulla. Venison commodo enim flank turkey, elit culpa ex salami ham hock tempor nulla. Exercitation doner deserunt elit brisket. Est bresaola chuck ham. Consequat in aliqua tri-tip doner.</p>
+            
+            <p>Pig occaecat t-bone proident cillum jerky swine ut. Capicola chuck strip steak kielbasa enim ham frankfurter. Mollit enim flank, ham brisket est ut eiusmod sirloin. Meatball swine sirloin chuck adipisicing shankle, ribeye jowl brisket enim turkey non pig meatloaf. Ad in turducken, ut incididunt shoulder sunt t-bone sed pork belly drumstick tail aliqua in fatback. Prosciutto dolore pariatur consequat, pork loin officia ribeye nostrud nulla. Veniam irure enim bacon et aute magna bresaola.</p>
+            
+            <p>Short loin in jerky chuck pork veniam aute officia fatback biltong. Tri-tip pork chop ullamco pork loin eu. Jowl fatback dolor andouille jerky eu. Consequat pastrami sausage ham hock strip steak et nulla id. Flank rump pork chop, cillum tongue shankle proident minim. Hamburger ribeye do magna reprehenderit elit, beef sunt enim irure tenderloin bresaola ullamco.</p>
+            
+            <p>Bacon ipsum dolor sit amet turkey quis aute drumstick shankle. Exercitation biltong fatback reprehenderit magna. Reprehenderit labore ham hock, elit cupidatat meatloaf filet mignon quis t-bone officia commodo. Beef ribs commodo adipisicing, venison sunt eiusmod ball tip andouille sed ribeye nostrud biltong quis boudin nisi.</p>
+    
+            <p>Magna qui sirloin eu, meatloaf laborum adipisicing bacon flank. Pork anim short ribs ut doner. Nostrud ball tip nisi shankle. Short ribs pig chicken cupidatat ad sausage deserunt strip steak swine dolore shoulder esse reprehenderit venison boudin.</p>
+            
+            <p>Non sint cillum exercitation, nisi pork pork belly deserunt biltong beef et dolore aliqua shoulder mollit. Deserunt magna kielbasa andouille duis meatball. Qui beef meatball ball tip tempor ad ground round. Anim bacon qui adipisicing pancetta, aute ground round reprehenderit ribeye fatback. Bresaola duis turducken, turkey ut sausage shank beef. Ball tip tongue ground round, spare ribs in meatloaf corned beef deserunt occaecat adipisicing leberkas short loin.</p>
+            
+            <p>Pig tail strip steak swine, kielbasa sirloin rump dolor salami sausage brisket. Pork sint pork belly irure. Rump doner voluptate, ground round nostrud incididunt pariatur jowl qui bresaola dolore pork. Short loin sed in elit ullamco deserunt.</p>
+            
+            <p>Est ball tip veniam ham tail ribeye. Ball tip sirloin excepteur, veniam spare ribs magna filet mignon consectetur commodo short loin frankfurter t-bone qui sed. Chicken commodo laborum ut cupidatat drumstick et, pariatur venison pig ad tongue. Jerky consectetur bacon short ribs tongue velit pariatur pig eiusmod ad drumstick dolor.</p>
+            
+            <p>T-bone anim cillum doner pastrami, deserunt pig rump sed ullamco fatback exercitation culpa enim. T-bone elit adipisicing nisi. Doner dolor sint deserunt shankle jerky bresaola. Exercitation id ut ad magna, short ribs chicken pork shank beef meatloaf hamburger venison. Veniam ground round commodo, cupidatat laborum enim ball tip.</p>
+            
+            <p>Cillum voluptate commodo magna pork chop tenderloin turkey labore cow flank minim swine do. Ut chuck voluptate, in dolor sunt pancetta. Beef pastrami turducken culpa corned beef. Flank in mollit adipisicing brisket dolore biltong commodo jerky cillum culpa voluptate elit beef ribs. Ut strip steak cupidatat, in corned beef turkey qui brisket andouille. Brisket tri-tip labore venison ut.</p>
+            
+            <p>Brisket et flank biltong, in swine doner tri-tip eu t-bone pastrami eiusmod nulla. Venison commodo enim flank turkey, elit culpa ex salami ham hock tempor nulla. Exercitation doner deserunt elit brisket. Est bresaola chuck ham. Consequat in aliqua tri-tip doner.</p>
+            
+            <p>Pig occaecat t-bone proident cillum jerky swine ut. Capicola chuck strip steak kielbasa enim ham frankfurter. Mollit enim flank, ham brisket est ut eiusmod sirloin. Meatball swine sirloin chuck adipisicing shankle, ribeye jowl brisket enim turkey non pig meatloaf. Ad in turducken, ut incididunt shoulder sunt t-bone sed pork belly drumstick tail aliqua in fatback. Prosciutto dolore pariatur consequat, pork loin officia ribeye nostrud nulla. Veniam irure enim bacon et aute magna bresaola.</p>
+            
+            <p>Short loin in jerky chuck pork veniam aute officia fatback biltong. Tri-tip pork chop ullamco pork loin eu. Jowl fatback dolor andouille jerky eu. Consequat pastrami sausage ham hock strip steak et nulla id. Flank rump pork chop, cillum tongue shankle proident minim. Hamburger ribeye do magna reprehenderit elit, beef sunt enim irure tenderloin bresaola ullamco.</p>
+        </div>
     </div>
 </div>
 
@@ -101,6 +154,10 @@ pre-HTML5 browsers and I'm confident that the full release version
 will be completed before the lauch date of this project.
 -->
 <script type="text/javascript" src="js/libs/jQM/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+
+<!-- iScroll view -->
+<script type="text/javascript" src="js/libs/iscroll.js"></script> 
+<script type="text/javascript" src="js/libs/jquery.mobile.iscrollview.js"></script>  
 
 </body>
 </html>

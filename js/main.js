@@ -13,10 +13,10 @@ $(document).on('mobileinit', function(e){
 
 	});
 	
-$('#page_style_0')	.on('pagehide', function(event){
+$('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){
 							$('#universalFooter').animate({
-								bottom: '-30%'
+								bottom: '-55%'
 								}, 300, function(){
 									console.log('exec');
 									footerRetracted = true;
