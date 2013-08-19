@@ -217,6 +217,13 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 
+.page_style_a .content{
+	column-fill: balance !important;
+	-webkit-column-count:2; 
+	-webkit-column-gap:32px;
+	margin: 120px 120px 30px 120px;
+	}
+
 /********** page style B **********/
 
 
@@ -226,6 +233,13 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	background-image:	url(../images/Header-Background-White_Opaque-1.png),
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-SJH-CfoC-1.png);
+	}
+
+.page_style_b .content{
+	column-fill: balance !important;
+	-webkit-column-count:2; 
+	-webkit-column-gap:32px;
+	margin: 120px 120px 30px 120px;
 	}
 
 
@@ -353,6 +367,24 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	color:#766a5e;
 	}
 
+/********** page style F **********/
+
+.page_style_f .title_header{
+	height: 700px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-KCC-Donors-1.png);
+						
+	background-position: 	0px 0px,
+							0px 0px,
+							0px -200px;
+	}
+
+
+.page_style_f .content{
+	margin: 150px 295px;
+	}
 	
 /********** General Page styles **********/
 
@@ -409,14 +441,10 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 .content{
-	column-fill: balance !important;
 	font-family:TradeGothicLT;
 	width:auto;
 	text-transform: none !important;
 	font-size:14pt;
-	margin: 120px 120px 30px 120px;
-	-webkit-column-count:2; 
-	-webkit-column-gap:32px; 
 	}
 
 .content p{
@@ -494,5 +522,9 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	padding:10px;
 	font-family: generations;
 	font-size: 20pt;
+	border-right: 2px solid #666;
 	}
 	
+.content-footer-links ul li:last-child{
+	border-right: none !important;
+	}

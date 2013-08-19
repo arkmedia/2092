@@ -15,7 +15,7 @@ $(document).on('mobileinit', function(e){
 		});
 	
 $(document).on('keyup', function(){
-	$.mobile.changePage('#community_partnerships');
+	$.mobile.changePage('#kraemer_cancer_center');
 	});	
 
 
