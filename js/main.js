@@ -15,7 +15,7 @@ $(document).on('mobileinit', function(e){
 		});
 	
 $(document).on('keyup', function(){
-	$.mobile.changePage('#donors');
+	$.mobile.changePage('#community_partnerships');
 	});	
 
 

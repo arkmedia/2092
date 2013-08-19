@@ -300,8 +300,60 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 .page_style_d div.donor-list-container ul li{
 	padding: 0px 20px 20px 100px;
 	}
+	
+/********** page style E **********/
 
+.page_style_e .title_header{
+	height: 640px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png);
+	}
 
+.page_style_e .title_header .header-text{
+	margin:260px 120px 200px 120px;
+	text-align: left;
+	-webkit-column-count:2; 
+	-webkit-column-gap:32px;
+	font-family: TradeGothicLT;
+	font-size:14pt; 
+	}
+	
+.page_style_e .title_header .header-text p{
+	margin-top:0px !important;
+	}
+
+.page_style_e [data-role="content"]{
+	background-color: rgba(50,50,50,0.3);
+	}
+	
+.page_style_e [data-role="content"] .content-table{
+	width:1080px;
+	height:500px;
+	border:none;
+	}
+
+.page_style_e [data-role="content"] table.content-table td{
+	vertical-align:top;	
+	text-align:center;
+	padding:20px;
+	}
+
+.page_style_e [data-role="content"] table.content-table td.side{
+	width:210px;
+	}
+
+.page_style_e [data-role="content"] table.content-table td.middle{
+	overflow:hidden;
+	}
+	
+.page_style_e .content-table-title{
+	font-family: AGaramond_SemiBoldItalic;
+	font-size: 20pt;
+	color:#766a5e;
+	}
+
+	
 /********** General Page styles **********/
 
 .nobr{
@@ -387,3 +439,60 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	font-family: TradeGothicLT_Bold;
 	font-size:16pt;
 	}
+
+/********** content Table **********/
+
+.content-table .footer-btn img{
+	width: 55px;
+	height: 55px;
+	}
+
+.content-table-top-level{
+	height:100px;
+	}
+
+.content-table-bottom{
+	margin-top:50px;
+	}
+
+.content-table-bottom p{
+	text-align:left;
+	}
+	
+/********** Content bottom Page Links ***********/
+
+.content-footer{
+	width:100%;
+	margin-top:150px;
+	margin-bottom: 150px;
+	text-align:center
+	}
+
+.content-footer-more{
+	width:100%;
+	margin-bottom:30px;
+	}
+
+.content-footer-more span{
+	font-family: TradeGothicLT_Bold;
+	font-size: 12pt;
+	}
+
+.content-footer-links{
+	width:100%;
+	}
+
+.content-footer-links ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	}
+
+.content-footer-links ul li{
+	display: inline-block;
+	width:265px;
+	padding:10px;
+	font-family: generations;
+	font-size: 20pt;
+	}
+	
