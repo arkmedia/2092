@@ -15,7 +15,7 @@ $(document).on('mobileinit', function(e){
 		});
 	
 $(document).on('keyup', function(){
-	$.mobile.changePage('#kraemer_cancer_center');
+	$.mobile.changePage('#st_josephs_community_foundation');
 	});	
 
 
