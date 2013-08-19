@@ -13,12 +13,15 @@ $(document).on('mobileinit', function(e){
 
 	});
 	
+$(document).on('keyup', function(){
+	$.mobile.changePage('#caring_for_our_community');
+	});	
+	
 $('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){
 							$('#universalFooter').animate({
-								bottom: '-55%'
+								bottom: '-820px'
 								}, 300, function(){
-									console.log('exec');
 									footerRetracted = true;
 									});
 							}
@@ -28,7 +31,6 @@ $('#front_page')	.on('pagehide', function(event){
 							$('#universalFooter').animate({
 								bottom: '0px'
 								}, 300, function(){
-									console.log('exec');
 									footerRetracted = false;
 									});
 							}						
@@ -59,9 +61,5 @@ $('a.footer-btn').on('touchstart mousedown', function(){
 				});
 
 			})
-		
-	
-	
-		
 	return false;
 	})

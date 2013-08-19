@@ -1,28 +1,54 @@
 @charset "utf-8";
 /* CSS Document */
 
-.frame{
-	width:540px;
-	height:960px;
+/* fonts */
+body{
+	width:1080px;
+	height: 1920px;
 	}
 
-/* fonts */
+@font-face{
+	font-family: TradeGothicLT;
+	src:url(../fonts/TradeGothic-LT.ttf);
+	}
+
+@font-face{
+	font-family: TradeGothicLT_Bold;
+	src:url(../fonts/TradeGothic-LT-Bold.ttf);
+	}
+
 @font-face{
 	font-family: generations;
 	src:url(../fonts/AGaramond-Italic.ttf);
 	}
 
+@font-face{
+	font-family: AGaramond_BoldItalic;
+	src:url(../fonts/AGaramond-BoldItalic.ttf);
+	}
+
+@font-face{
+	font-family: AGaramond_SemiBoldItalic;
+	src:url(../fonts/AGaramond-SemiboldItalic.ttf);
+	}
+
 /*  Generic page styles */
 div[data-role="page"]{
 	background:url(../images/Page_Background-1.jpg);
-	height:100%;
+	width:1080px;
+	height:1920px;
+	font-smooth:always;
 	}
 
 div[data-role="content"]{
 	padding:0px !important;
-	height:100%;
+		
 	}
 
+a, a:active, a:visited{
+	text-decoration:none;	
+	color:inherit !important;
+	}
 
 /********** Universal Footer styles **********/
 .universalFooter{
@@ -38,14 +64,14 @@ div[data-role="content"]{
 							0px 20px,
 							0px 0px;
 	background-repeat: no-repeat;
-	background-size:100%;
+	background-size:1080px;
 	
 	/* colors */
 	color:#FFF;
 	
 	/* dimensions */
-	width:100%;
-	height:70%;
+	width:1080px;
+	height:1000px;;
 	
 	/* others */
 	overflow: hidden;
@@ -179,49 +205,108 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 
+
 /********** page style A **********/
 
-.title_header{
-	/* size */
-	width:100%;
-	height: 50%;
+.page_style_a .title_header{
+	height: 690px;
 	
-	/* alignment */
-	text-align:center;
-	padding-top:1em;
-	display:block;
-	vertical-align:bottom;
-	
-	/*text*/
-	font-family: generations;
-	font-size: 1.5em;	
-	font-weight:bold;
-	
-	/* backgrounds */
 	background-image:	url(../images/Header-Background-White_Opaque-1.png),
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-GoG-Presidents_Message-1.png);
-	background-repeat: no-repeat;
-	background-size:100%;
+	}
+
+
+/********** page style B **********/
+
+
+.page_style_b .title_header{
+	height: 590px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-SJH-CfoC-1.png);
+	}
+
+
+/********** General Page styles **********/
+
+
+[data-role="page"] .title_header{
+		/* size */
+	width:	1080px;
+	
+	/* alignment */
+	text-align:		center;
+	padding-top:	1em;
+	display:		block;
+	vertical-align:	bottom;
+	
+	/*text*/
+	font-family: 	AGaramond_SemiBoldItalic;
+	font-size: 		40pt;	
+	font-weight:	bold;
+	
+	/* backgrounds */
+	background-color:	transparent;
+	background-repeat:	no-repeat;
+	background-size:	1080px;
+	border:				none;
+	}
+
+.title_header span.main_title{
+	
+	}
+
+.title_header span.sub_title{
+	font-family: TradeGothicLT_Bold;
+	}
+
+.back-button{
+	margin-top: 30px;
+	margin-left: 15px;
+	position: absolute;
+	left:0px;
+	top:0px;
+	background:url(../images/Header-Button-Arrow_Left-Normal-1.png) no-repeat;
+	background-size:cover;
+	width:73px;
+	height:73px;
 	}
 
 .splash_image{
-	width:100%;
+	width:1080px;
 	height: 37.88%;
 	background-color:#AAA;
 	}
 
 .content{
-	width:auto !important;
-	display: inline-block;
-	vertical-align:top;
+	font-family:TradeGothicLT;
+	width:auto;
 	text-transform: none !important;
-	font-size:0.7em;
-	margin: 20px 40px 150px 40px;
+	font-size:14pt;
+	margin: 120px 120px 30px 120px;
 	-webkit-column-count:2; 
-	-webkit-column-gap:15px; 
+	-webkit-column-gap:32px; 
 	}
 
 .content p{
 	margin-top:0px !important;
+	}
+
+.page_footer{
+	width:1080px;
+	text-align:center;
+	color: #56473C;
+	}
+
+.footer_other_links{
+	margin-top:50px;
+	font-family: AGaramond_BoldItalic;
+	font-size:24pt;
+	}
+
+.footer_more{
+	font-family: TradeGothicLT_Bold;
+	font-size:16pt;
 	}
