@@ -14,9 +14,6 @@ $(document).on('mobileinit', function(e){
 	
 		});
 	
-$(document).on('keyup', function(){
-	$.mobile.changePage('#st_josephs_community_foundation');
-	});	
 
 
 $('.page_style_d .donor-grid li')	.on('touchstart mousedown', function(){
