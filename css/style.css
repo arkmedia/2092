@@ -244,6 +244,64 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	margin-right:120px;
 	}
 
+/********** page style D **********/
+
+.page_style_d .title_header{
+	height: 210px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png);
+	}
+
+.page_style_d{
+	background: -webkit-linear-gradient(left, rgba(50,50,50,0.3) 0px,rgba(50,50,50,0.3) 434px,rgba(0,0,0,0) 434px,rgba(0,0,0,0) 1080px), url(../images/Page_Background-1.jpg) !important;
+	}
+
+.page_style_d ul.donor-grid{
+	display:inline-block;
+	width: 435px;
+	margin-top: 100px;
+	padding:0px;
+	list-style:none;
+	border:none;
+	}
+	
+.page_style_d ul.donor-grid li{
+	padding: 25px 0px 25px 100px;
+	font-family: TradeGothicLT;
+	font-size: 20pt;
+	border-bottom:1px solid #FFF;
+	}
+	
+.page_style_d ul.donor-grid li.donor-active{
+	background-color:#FFFFFF;
+	}
+	
+.page_style_d div.donor-list-container{
+	margin-top: 100px;
+	vertical-align:top;
+	display:inline-block;
+	}
+
+.page_style_d div.donor-list-container ul{
+	width:100%;
+	display:none;
+	font-family: TradeGothicLT;
+	font-size:20pt;
+	list-style:none;
+	padding:0px;	
+	}
+
+.page_style_d div.donor-list-container ul.default{
+	display:inline-block !important;
+	}
+
+
+.page_style_d div.donor-list-container ul li{
+	padding: 0px 20px 20px 100px;
+	}
+
+
 /********** General Page styles **********/
 
 .nobr{

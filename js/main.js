@@ -15,10 +15,28 @@ $(document).on('mobileinit', function(e){
 		});
 	
 $(document).on('keyup', function(){
-	$.mobile.changePage('#impact_span_generations');
+	$.mobile.changePage('#donors');
 	});	
 
 
+$('.page_style_d .donor-grid li')	.on('touchstart mousedown', function(){
+										var siblings = document.querySelectorAll('.page_style_d .donor-grid li'),
+											sibLength = siblings.length,
+											lists = document.querySelectorAll('.donor-list-container ul')
+											listsLength = lists.length;
+										for (i=0;i<sibLength;i++){
+											siblings[i].classList.remove('donor-active');
+											}											
+										this.classList.add('donor-active');
+										
+										for (i=0;i<listsLength;i++){
+											lists[i].classList.remove('default');
+											lists[i].style.display = 'none';
+											}	
+											
+										document.getElementById(this.getAttribute('data-for')).style.display = 'inline-block';
+	
+										});
 	
 $('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){
