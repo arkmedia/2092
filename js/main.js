@@ -11,11 +11,14 @@ $(document).on('mobileinit', function(e){
 		return l + '%';
 		});
 
-	});
+	
+		});
 	
 $(document).on('keyup', function(){
-	$.mobile.changePage('#caring_for_our_community');
+	$.mobile.changePage('#impact_span_generations');
 	});	
+
+
 	
 $('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){

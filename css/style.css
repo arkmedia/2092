@@ -229,8 +229,26 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 
+/********** page style C **********/
+
+.page_style_c .content{
+	margin-left:0px;
+	margin-right:0px;
+	}
+	
+.page_style_c .content p.left-side:not(.has-image){
+	margin-left:120px;
+	}
+
+.page_style_c .content p.right-side:not(.has-image){
+	margin-right:120px;
+	}
+
 /********** General Page styles **********/
 
+.nobr{
+	display:inline-block;
+	}
 
 [data-role="page"] .title_header{
 		/* size */
@@ -281,6 +299,7 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 .content{
+	column-fill: balance !important;
 	font-family:TradeGothicLT;
 	width:auto;
 	text-transform: none !important;
