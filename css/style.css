@@ -14,7 +14,7 @@
 	}
 
 @font-face{
-	font-family: AGaramond_BoldItalic;
+	font-family: AGaramond_Italic;
 	src:url(../fonts/AGaramond-Italic.ttf);
 	}
 
@@ -167,8 +167,12 @@ a, a:active, a:visited{
 	}
 
 .content-footer-more span{
-	font-family: TradeGothicLT_Bold;
-	font-size: 12pt;
+	font-family: TradeGothicLT;
+	font-size: 12px/30px;
+	font-variant:normal;
+	font-weight:bold;
+	color: #584b40;
+	text-shadow: 0 -2px 0 rgba(255,255,255,.75);
 	}
 
 .content-footer-links{
@@ -185,9 +189,10 @@ a, a:active, a:visited{
 	display: inline-block;
 	width:265px;
 	padding:10px;
-	font-family: AGaramond_BoldItalic;
-	font-size: 20pt;
 	border-right: 2px solid #666;
+	font-family: AGaramond_SemiBoldItalic;
+	font-size: 30px;
+	color: #584b40;
 	}
 	
 .content-footer-links ul li:last-child{
@@ -216,11 +221,11 @@ a, a:active, a:visited{
 	
 	/* dimensions */
 	width:1080px;
-	height:1000px;;
+	height:1071px;
 	
 	/* others */
 	overflow: hidden;
-	
+	-webkit-animation: footerUp 1s;
 	-webkit-transform: translatez(0);
 	}
 
@@ -247,7 +252,13 @@ a, a:active, a:visited{
 	width:27.77%;
 	}
 
-.universalFooter .footer-items li, .universalFooter .footer-nav-sub-menu-item li{
+.universalFooter .main-menu-table-bottom{
+	margin-top:20px;
+	}	
+	
+.universalFooter .main-menu-table-bottom li,
+.universalFooter .footer-items li,
+.universalFooter .footer-nav-sub-menu-item li{
 	/* backgrounds */	
 	background:url(../images/main_menu/menu_divider.png) no-repeat bottom center;
 	background-size:48.16%;
@@ -257,32 +268,37 @@ a, a:active, a:visited{
 	padding-bottom:10px;
 	}
 
+.universalFooter .main-menu-table-bottom li,
+.universalFooter .main-menu-table-bottom li a,
+.universalFooter .main-menu-table-bottom li a:visited,
 .universalFooter .footer-items li a,
-.universalFooter .footer-items li a:active,
 .universalFooter .footer-items li a:visited,
 .universalFooter .footer-nav-sub-menu-item li a,
-.universalFooter .footer-nav-sub-menu-item li a:active,
 .universalFooter .footer-nav-sub-menu-item li a:visited{
-	/*color*/
-	color:#FFF;
-	text-shadow: 2px 2px 4px #333;
+	/*fonts*/
+	font-style:italic;
+	font-size:40px;
+	font-family:AGaramond_SemiBoldItalic;
+	color:#d0cab9;	
+	text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+	
 	
 	/*styles*/
 	text-decoration:none;
 	text-transform:none !important;
 	
-	/*fonts*/
-	font-weight:normal;
-	font-size:1.6em;
-	font-family:AGaramond_BoldItalic;	
-	}
-	
-.universalFooter .footer-items li a:hover, .universalFooter .footer-nav-sub-menu-item li a:hover{
-	color:#DDD;
-	opacity:0.5;
+
 	}
 
-.universalFooter .footer-items li:last-child, .universalFooter .footer-nav-sub-menu-item li:last-child{
+.universalFooter .main-menu-table-bottom li a:active,	
+.universalFooter .footer-nav-sub-menu-item li a:active,
+.universalFooter .footer-items li a:active{
+	color:#766a5e;
+	}
+
+.universalFooter .main-menu-table-bottom li:last-child,
+.universalFooter .footer-items li:last-child,
+.universalFooter .footer-nav-sub-menu-item li:last-child{
 	background:none;
 	}
 
@@ -302,9 +318,7 @@ a, a:active, a:visited{
 	text-align: center;
 	}	
 
-a.footer-btn img{
-	width:34.75%;
-	}
+
 
 a.footer-btn img.normal, a.footer-btn:hover img.active{
 	display:inherit;
@@ -314,18 +328,9 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	display:none;
 	}	
 	
-
-.universalFooter .footer-nav-menu table td.footer-table-nav-title{
-	width:60%;
-	text-align:center;
-	}
-
-.universalFooter .footer-nav-menu table td.footer-table-nav-title span{
-	text-transform:none !important;
-	font-size:1.5em;
-	font-weight:bold;
-	color:#FFF;
-	text-shadow: 2px 2px 4px #333;
+.universalFooter .footer-btn img{
+	width:48px;
+	height:48px;
 	}
 
 .footer-nav-sub-menu{
@@ -349,7 +354,54 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	text-align: center;
 	}
 
+.main-menu-table-title {
+	font-family: TradeGothicLT;
+	font-size: 48px;
+	font-weight:bold;
+	color: #f4f0dd;
+	text-shadow: 0 -1px 0 rgba(255,255,255,0.75), 0 2px 10px rgba(0,0,0,0.5);
+	
+	}
 
+.universalFooter-down{
+	-webkit-animation: footerDown 1s;
+	bottom:-895px;
+	}
+
+.footer-title {
+	-webkit-animation: footerTitleAppear 1s; 
+	}
+
+.universalFooter-down .footer-title{
+	-webkit-animation: footerTitleGone 1s;
+	opacity: 0;
+	}
+
+
+
+@-webkit-keyframes footerDown 
+{
+from {bottom: 0px;}
+to {bottom: -895px;}
+}
+
+@-webkit-keyframes footerUp
+{
+from {bottom: -895px;}
+to {bottom: 0px;}
+}
+
+@-webkit-keyframes footerTitleGone
+{
+from {opacity: 1;}
+to {opacity: 0;}
+}
+
+@-webkit-keyframes footerTitleAppear
+{
+from {opacity: 0;}
+to {opacity: 1;}
+}
 
 /********** page style A **********/
 

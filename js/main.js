@@ -37,20 +37,14 @@ $('.page_style_d .donor-grid li')	.on('touchstart mousedown', function(){
 	
 $('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){
-							$('#universalFooter').animate({
-								bottom: '-820px'
-								}, 300, function(){
-									footerRetracted = true;
-									});
+							document.getElementById('universalFooter').classList.add('universalFooter-down');
+							footerRetracted = true;
 							}
 						})
 					.on('pageshow', function(event){
 						if (footerRetracted){
-							$('#universalFooter').animate({
-								bottom: '0px'
-								}, 300, function(){
-									footerRetracted = false;
-									});
+							document.getElementById('universalFooter').classList.remove('universalFooter-down');
+							footerRetracted = false;
 							}						
 						});
 						
