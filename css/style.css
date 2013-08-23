@@ -208,13 +208,15 @@ a, a:active, a:visited{
 	z-index:9999;
 	text-align:center;
 	background-image:	url(../images/main_menu/Bottom_Menu-Background-Main-1.png), 
-						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png), 
+						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png),
+						url(../images/main_menu/Bottom_Menu-GoG_Logo-Collapsed-1.png),
 						url(../images/main_menu/Bottom_Menu-Background-White_Translucent-1.png);
 	background-position: 	0px 40px, 
 							0px 20px,
+							457px 30px,
 							0px 0px;
 	background-repeat: no-repeat;
-	background-size:1080px;
+	background-size:1080px, 1080px, auto, 1080px;;
 	
 	/* colors */
 	color:#FFF;
@@ -226,6 +228,7 @@ a, a:active, a:visited{
 	/* others */
 	overflow: hidden;
 	-webkit-animation: footerUp 1s;
+	-webkit-animation-timing-function:ease-out; 
 	-webkit-transform: translatez(0);
 	}
 
@@ -365,30 +368,83 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 
 .universalFooter-down{
 	-webkit-animation: footerDown 1s;
-	bottom:-895px;
+	-webkit-animation-timing-function:ease-out; 
+	bottom:-795px;
+	background-position: 	0px 140px, 
+							0px 120px,
+							457px 30px,
+							0px 0px;
 	}
 
 .footer-title {
 	-webkit-animation: footerTitleAppear 1s; 
+	-webkit-animation-timing-function:ease-out; 
 	}
 
 .universalFooter-down .footer-title{
 	-webkit-animation: footerTitleGone 1s;
+	-webkit-animation-timing-function:ease-out; 
 	opacity: 0;
+	}
+
+.universalFooter .home-btn-containter{
+	-webkit-animation:  ContentUp 1s;
+	-webkit-animation-timing-function:ease-out; 
+	margin-top:20px;
+	}
+
+.universalFooter-down .home-btn-containter{
+	-webkit-animation:  ContentDown 1s;
+	-webkit-animation-timing-function:ease-out; 
+	margin-top:140px;
 	}
 
 
 
 @-webkit-keyframes footerDown 
 {
-from {bottom: 0px;}
-to {bottom: -895px;}
+from {
+	bottom: 0px;
+	background-position: 	0px 40px, 
+							0px 20px,
+							457px 30px,
+							0px 0px;
+	}
+to {
+	bottom: -795px;
+	background-position: 	0px 140px, 
+							0px 120px,
+							457px 30px,
+							0px 0px;
+	}
 }
+
+@-webkit-keyframes ContentUp{
+	from{margin-top:140px;}
+	to{margin-top:20px;}
+	}
+
+@-webkit-keyframes ContentDown{	
+	from{margin-top:20px;}
+	to{margin-top:140px;}
+	}
 
 @-webkit-keyframes footerUp
 {
-from {bottom: -895px;}
-to {bottom: 0px;}
+to {
+	bottom: 0px;
+	background-position: 	0px 40px, 
+							0px 20px,
+							457px 30px,
+							0px 0px;
+	}
+from {
+	bottom: -795px;
+	background-position: 	0px 140px, 
+							0px 120px,
+							457px 30px,
+							0px 0px;
+	}
 }
 
 @-webkit-keyframes footerTitleGone
