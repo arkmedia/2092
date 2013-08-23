@@ -364,24 +364,8 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 .universalFooter-down{
-	-webkit-animation: 		footerDown 1s;
-	bottom:					-775px;
-	margin-top:				140px;
-	background-position: 	0px 160px, 
-							0px 140px,
-							0px 0px;
-	}
-
-
-.footer-title-alt{
-	margin-top:50px !important;
-	-webkit-animation: GenerationsAppear 1s; 
-	opacity:0;
-	}
-
-.universalFooter-down .footer-title-alt{
-	-webkit-animation: GenerationsGone 1s; 	
-	opacity:1;
+	-webkit-animation: footerDown 1s;
+	bottom:-895px;
 	}
 
 .footer-title {
@@ -392,76 +376,19 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	-webkit-animation: footerTitleGone 1s;
 	opacity: 0;
 	}
-/*.universalFooter-down .home-btn-containter{
-	-webkit-animation: footerContentDown 1s;
-	margin-top:160px;
-	}
 
-.universalFooter .home-btn-containter{
-	-webkit-animation: footerContentUp 1s;
-	margin-top:-80px;
-	}
-*/
-
-@-webkit-keyframes footerContentDown
-{
-from{ margin-top:-80px}
-to{ margin-top:160px;}		
-} 
-
-@-webkit-keyframes footerContentUp
-{
-from{ margin-top:160px;}
-to{ margin-top:-80px}
-		
-} 
 
 
 @-webkit-keyframes footerDown 
 {
-from {
-	bottom: 					0px;
-	background-position: 		0px 40px, 
-								0px 20px,
-								0px 0px;
-}
-to {
-	bottom: 					-775px;
-	background-position: 		0px 160px, 
-							 	0px 140px,
-							 	0px 0px;
-}
-
-
+from {bottom: 0px;}
+to {bottom: -895px;}
 }
 
 @-webkit-keyframes footerUp
 {
-from {
-	bottom: 					-775px;
-	background-position: 		0px 160px, 
-							 	0px 140px,
-							 	0px 0px;
-}
-to {
-	bottom: 					0px;
-	background-position: 		0px 40px, 
-								0px 20px,
-								0px 0px;
-}
-
-}
-
-@-webkit-keyframes GenerationsAppear
-{
-from {opacity: 1;}
-to {opacity: 0;}
-}
-
-@-webkit-keyframes GenerationsGone
-{
-from {opacity: 0;}
-to {opacity: 1;}
+from {bottom: -895px;}
+to {bottom: 0px;}
 }
 
 @-webkit-keyframes footerTitleGone
