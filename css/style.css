@@ -35,6 +35,10 @@
 	}
 
 
+*{
+	max-width:1080px;	
+}
+
 /* body matches HD Screen */
 
 body{
@@ -373,6 +377,12 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	
 	}
 
+
+.universalFooter td.side {vertical-align:top; width:200px;}
+.universalFooter td.side div{padding-top:20px;}
+
+.footer-btn{line-height:86px; vertical-align:middle;}
+
 .universalFooter-down{
 	-webkit-animation: 					footerDown 1s;
 	-webkit-animation-timing-function:	ease-out; 
@@ -406,7 +416,55 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	margin-top:							140px;
 	}
 
+.gone{display:none;}
+	
+.universalFooter td.middle{overflow:hidden;}	
 
+.menu-lists{
+	position:relative; 
+	overflow:hidden;
+	}	
+	
+.menu-lists li{overflow:hidden; height:86px;}
+
+.menu-lists li div{position:absolute; width:100%; text-align:center;}
+	
+.slideOut{
+	display: inherit;
+	left:100%;
+
+	}
+	
+.slideIn{
+	display: inherit;
+	left:0; 
+	}
+
+.slideInLeft{-webkit-animation: slideInLeft 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideOutLeft{-webkit-animation: slideOutLeft 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideInRight{-webkit-animation: slideInRight 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideOutRight{-webkit-animation: slideOutRight 0.4s;-webkit-animation-timing-function:	ease-in; }
+
+
+@-webkit-keyframes slideOutLeft {
+	from {left:0;}
+	to {left:-100%}
+	}
+
+@-webkit-keyframes slideInLeft {
+	from {left:100%;}
+	to {left:0}
+	}
+
+@-webkit-keyframes slideOutRight {
+	from {left:0;}
+	to {left:100%}
+	}
+
+@-webkit-keyframes slideInRight {
+	from {left:-100%;}
+	to {left:0}
+	}
 
 @-webkit-keyframes footerDown 
 {
@@ -645,5 +703,3 @@ to {opacity: 1;}
 /********** page style G **********/
 
 
-
-	
