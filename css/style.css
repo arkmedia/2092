@@ -762,7 +762,7 @@ td.middle{overflow:hidden;}
 						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-1.png);
 	}
 
-/* */ 
+/* Daniel Rozek Memorial Classic Golf Outing */ 
 
 #daniel_rozek_memorial_classic_golf_outing .title_header{
 	height: 			880px;	!important;
@@ -776,4 +776,16 @@ td.middle{overflow:hidden;}
 
 #daniel_rozek_memorial_classic_golf_outing .two-cols{
 	margin-top:					40px;
+	}
+
+/* Element of Art Night */
+
+#element_of_art_night .title_header{
+	height: 			1010px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-EoA-1.png);
+	background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;
 	}
