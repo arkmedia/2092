@@ -246,7 +246,7 @@ a, a:active, a:visited{
 	
 	/* others */
 	overflow: hidden;
-	-webkit-animation: footerUp 1s;
+	-webkit-animation: footerUp 0.5s;
 	-webkit-animation-timing-function:ease-out; 
 	-webkit-transform: translatez(0);
 	}
@@ -389,7 +389,7 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 
 
 .universalFooter-down{
-	-webkit-animation: 					footerDown 1s;
+	-webkit-animation: 					footerDown 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
 	background-position: 				0px 140px, 
@@ -399,24 +399,24 @@ a.footer-btn img.active, a.footer-btn:hover img.normal{
 	}
 
 .footer-title {
-	-webkit-animation: 					footerTitleAppear 1s; 
+	-webkit-animation: 					footerTitleAppear 0.5s; 
 	-webkit-animation-timing-function:	ease-out; 
 	}
 
 .universalFooter-down .footer-title{
-	-webkit-animation: 					footerTitleGone 1s;
+	-webkit-animation: 					footerTitleGone 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	opacity: 							0;
 	}
 
 .universalFooter .home-btn-containter{
-	-webkit-animation:  				ContentUp 1s;
+	-webkit-animation:  				ContentUp 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	margin-top:							20px;
 	}
 
 .universalFooter-down .home-btn-containter{
-	-webkit-animation:  				ContentDown 1s;
+	-webkit-animation:  				ContentDown 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	margin-top:							140px;
 	}
