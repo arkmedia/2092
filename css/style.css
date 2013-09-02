@@ -54,6 +54,10 @@ body{
 	text-transform:	none !important; /* jQuery Mobile applies text-transform to everything*/
 	}
 
+.iscroll-bottom-spacer{
+	height:275px !important;
+	}
+
 /**********  Defaults **********/
 
 div[data-role="page"]{
