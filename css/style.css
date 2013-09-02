@@ -757,3 +757,19 @@ td.middle{overflow:hidden;}
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-1.png);
 	}
+
+/* */ 
+
+#daniel_rozek_memorial_classic_golf_outing .title_header{
+	height: 			880px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-DRMGC-1.png);
+	background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;
+	}
+
+#daniel_rozek_memorial_classic_golf_outing .two-cols{
+	margin-top:					40px;
+	}
