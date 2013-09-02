@@ -789,3 +789,16 @@ td.middle{overflow:hidden;}
 							0px -50px,
 							0px -50px;
 	}
+
+/* Element of Art Night */
+
+#a_kentucky_derby_evening .title_header{
+	height: 			880px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-KDE-1.png);
+	background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;
+	}
+/* St. Joseph’s Community Foundation - See Default paghe style G */
