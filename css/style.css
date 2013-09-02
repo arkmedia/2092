@@ -201,6 +201,7 @@ a, a:active, a:visited{
 
 .content-footer-links ul li{
 	display: inline-block;
+	vertical-align:top;
 	width:265px;
 	padding:10px;
 	border-right: 2px solid #666;
@@ -556,7 +557,7 @@ td.middle{overflow:hidden;}
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-SJH-CfoC-1.png);
 	}
-
+	
 /********** page style C **********/
 
 .page_style_c .content{
@@ -716,4 +717,22 @@ td.middle{overflow:hidden;}
 
 /********** page style G **********/
 
+/* individual Page styles */
+
+/* How You Can Make A Difference */
+
+#how_you_can_make_a_difference .title_header{
+	height: 			1050px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-1.png);
+	}
+						
+#how_you_can_make_a_difference .title_header .header-text{
+	margin-top:					625px;
+	}
+
+#how_you_can_make_a_difference  [data-role="content"] .content-table{
+	height:200px !important;
+	}
 
