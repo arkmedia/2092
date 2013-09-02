@@ -49,8 +49,10 @@ function donorGridButtonAction(event){
 	for (h=0;h<listsLength;h++){ //remove all lists from display
 		if (lists[h].classList.contains('default')) {lists[h].classList.remove('default');}
 		lists[h].style.display = 'none';
-		}		
+		}	
+			
 	myList.style.display = 'inline-block'; // display associated list
+	$(myList).iscrollview('refresh');
 }	
 	
 	
