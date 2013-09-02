@@ -9,27 +9,14 @@ var footerRetracted = false, //footer state
 	lists =  document.querySelectorAll('.donor-list-container ul'),
 	listsLength = lists.length,
 	
-	/* footer button variables */
-	footerButtons = document.querySelectorAll('a.footer-btn'),
-	footerButtonsLength = footerButtons.length,
-	footerButtonCategories = [],
-	currentFooterButtonCategory = 0;
+	/* Universal Footer button variables */
+	universalFooter = document.getElementById('universalFooter'),
+	
+	/* footer data objects */
+	footerMenus = document.querySelectorAll('.menu-parent');
 
 $(document).on('mobileinit', function(){ // set defaults
-
-	var allFooterButtonLinks = document.querySelectorAll('.menu-lists li div'),
-		allFooterButtonLinksLength = allFooterButtonLinks.length;
 	
-	for (i=0;i<allFooterButtonLinksLength;i++){
-		var elem = allFooterButtonLinks[i],
-			myCat = elem.getAttribute('data-cat');
-				
-		if (footerButtonCategories.indexOf(myCat) == -1) {
-			footerButtonCategories.push(myCat);
-		}	
-	}	
-	/* hide all other footer button on init */
-	$('.menu-lists li div:not([data-cat="' + footerButtonCategories[currentFooterButtonCategory] + '"])').addClass('gone');	
 	});
 
 /* use jQuery mobile page event as trigger for animation */
@@ -76,7 +63,7 @@ function slideOutLeft(elem, i){
 
 function slideInLeft(elem, i){
 	var time = i*200;
-		setTimeout(function(){
+	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('slideIn'); 
 		elem.classList.add('slideInLeft');
@@ -95,7 +82,7 @@ function slideOutRight(elem, i){
 
 function slideInRight(elem, i){
 	var time = i*200;
-		setTimeout(function(){
+	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('slideIn'); 
 		elem.classList.add('slideInRight');
@@ -104,19 +91,20 @@ function slideInRight(elem, i){
 
 function goToNextFooterSubMenu(event){
 	var self = this,
-		from = document.querySelectorAll('ul.menu-lists li div[data-cat="' + footerButtonCategories[currentFooterButtonCategory] + '"]'),
+		menu = $(this).closest('.menu-parent')[0],
+		from = menu.querySelectorAll('ul.menu-lists li div[data-cat="' + menu.footerButtonCategories[menu.currentFooterButtonCategory] + '"]'),
 		fromLength = from.length,
 		to,
 		toLength,
-		getNextCat = ((currentFooterButtonCategory+1) <= (footerButtonCategories.length-1)) ? (currentFooterButtonCategory+1) : 0,
-		getPrevCat = ((currentFooterButtonCategory-1) < 0) ? (footerButtonCategories.length-1) : (currentFooterButtonCategory-1);
+		getNextCat = ((menu.currentFooterButtonCategory+1) <= (menu.footerButtonCategories.length-1)) ? (menu.currentFooterButtonCategory+1) : 0,
+		getPrevCat = ((menu.currentFooterButtonCategory-1) < 0) ? (menu.footerButtonCategories.length-1) : (menu.currentFooterButtonCategory-1);
 	
 
 	if (self.classList.contains('footer-next-btn')){
 		/* get destination */
-		to = document.querySelectorAll('ul.menu-lists li div[data-cat="' + footerButtonCategories[getNextCat] + '"]'),
+		to = menu.querySelectorAll('ul.menu-lists li div[data-cat="' + menu.footerButtonCategories[getNextCat] + '"]'),
 		toLength = to.length;		
-		currentFooterButtonCategory = getNextCat;
+		menu.currentFooterButtonCategory = getNextCat;
 		for (i=0;i<fromLength;i++){
 			var elem = from[i], time = i*1000;
 			slideOutLeft(elem, i);		
@@ -126,9 +114,9 @@ function goToNextFooterSubMenu(event){
 			slideInLeft(elem, i);		
 		}
 	} else if (self.classList.contains('footer-prev-btn')){
-		to = document.querySelectorAll('ul.menu-lists li div[data-cat="' + footerButtonCategories[getPrevCat] + '"]'),
+		to = menu.querySelectorAll('ul.menu-lists li div[data-cat="' + menu.footerButtonCategories[getPrevCat] + '"]'),
 		toLength = to.length;	
-		currentFooterButtonCategory = getPrevCat;
+		menu.currentFooterButtonCategory = getPrevCat;
 		for (i=0;i<fromLength;i++){
 			var elem = from[i], time = i*1000;
 			slideOutRight(elem, i);		
@@ -149,12 +137,40 @@ for (i=0;i<donorGridButtonsLength;i++){
 }
 
 
-/* attach appropriate mouse and touch handlers to footer buttons */	
-for (i=0;i<footerButtonsLength;i++){
-	var elem = footerButtons[i];
-	elem.addEventListener('mousedown',goToNextFooterSubMenu);
-	elem.addEventListener('touchstart',goToNextFooterSubMenu);
+for (i=0;i<footerMenus.length;i++){
+		var thisFooterMenu = footerMenus[i];
+		
+		thisFooterMenu.footerButtons = thisFooterMenu.querySelectorAll('a.footer-btn'),
+		thisFooterMenu.footerButtonsLength = thisFooterMenu.footerButtons.length,
+		thisFooterMenu.footerButtonCategories = [],
+		thisFooterMenu.currentFooterButtonCategory = 0,
+		thisFooterMenu.allFooterButtonLinks = thisFooterMenu.querySelectorAll('.menu-lists li div'),
+		thisFooterMenu.allFooterButtonLinksLength = thisFooterMenu.allFooterButtonLinks.length;
+	
+	for (h=0;h<thisFooterMenu.allFooterButtonLinksLength;h++){
+		var elem = thisFooterMenu.allFooterButtonLinks[h],
+			myCat = elem.getAttribute('data-cat');
+				
+		if (thisFooterMenu.footerButtonCategories.indexOf(myCat) == -1) {
+			thisFooterMenu.footerButtonCategories.push(myCat);
+		}	
+	}	
+	/* hide all other footer button on init */
+	thisFooterMenu.otherFooterButtons = thisFooterMenu.querySelectorAll('.menu-lists li div:not([data-cat="' + thisFooterMenu.footerButtonCategories[thisFooterMenu.currentFooterButtonCategory] + '"])');
+	for (h=0;h<thisFooterMenu.otherFooterButtons.length;h++){
+		thisFooterMenu.otherFooterButtons[h].classList.add('gone');
 	}
+	
+	/* attach appropriate mouse and touch handlers to footer buttons */
+	for (h=0;h<thisFooterMenu.footerButtonsLength;h++){
+		var elem = thisFooterMenu.footerButtons[h];
+		elem.addEventListener('mousedown',goToNextFooterSubMenu);
+		elem.addEventListener('touchstart',goToNextFooterSubMenu);
+	}
+	
+	console.log(thisFooterMenu.currentFooterButtonCategory);
+}
+
 	
 
 
