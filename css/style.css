@@ -820,3 +820,24 @@ td.middle{overflow:hidden;}
 	}
 
 /* St. Joseph’s Hospital Donors - See Default page style D */
+
+/* Your Gifts in Action */
+
+#your_gifts_in_action .title_header{
+	/*height: 			830px;	!important;*/
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-SJCF-YGiA-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+
+#your_gifts_in_action .content{
+	margin: 40px 120px 20px 120px;
+	}
+
+#your_gifts_in_action .content ul{
+	margin-left: 70px;
+	margin-top: -20px;
+	}

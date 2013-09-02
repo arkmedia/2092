@@ -52,7 +52,11 @@ function donorGridButtonAction(event){
 		}	
 			
 	myList.style.display = 'inline-block'; // display associated list
-	$(myList).iscrollview('refresh');
+	if (myList.iscrollInitiated == undefined){
+		myList.iscrollInitiated = true;		
+		$(myList).iscrollview('refresh');
+		}
+	
 }	
 	
 	
