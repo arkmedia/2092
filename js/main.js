@@ -12,8 +12,11 @@ var footerRetracted = false, //footer state
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
 	
+	/* footer content links */
+	footerContentLinks = document.querySelectorAll('.content-footer ul'),
+	
 	/* footer data objects */
-	footerMenus = document.querySelectorAll('.menu-parent');
+	footerMenus = document.getElementsByClassName('menu-parent');
 
 $(document).on('mobileinit', function(){ // set defaults
 	
@@ -22,13 +25,13 @@ $(document).on('mobileinit', function(){ // set defaults
 /* use jQuery mobile page event as trigger for animation */
 $('#front_page')	.on('pagehide', function(event){
 						if (!footerRetracted){
-							document.getElementById('universalFooter').classList.add('universalFooter-down');
+							universalFooter.classList.add('universalFooter-down');
 							footerRetracted = true;
 						}
 					})
 					.on('pageshow', function(event){
 						if (footerRetracted){
-							document.getElementById('universalFooter').classList.remove('universalFooter-down');
+							universalFooter.classList.remove('universalFooter-down');
 							footerRetracted = false;
 						}						
 					});
@@ -167,11 +170,23 @@ for (i=0;i<footerMenus.length;i++){
 		elem.addEventListener('mousedown',goToNextFooterSubMenu);
 		elem.addEventListener('touchstart',goToNextFooterSubMenu);
 	}
-	
-	console.log(thisFooterMenu.currentFooterButtonCategory);
 }
 
-	
 
+/* Match content footer button for height */
+for (i=0;i<footerContentLinks.length;i++){
+	var list = footerContentLinks[i],
+		items = list.getElementsByTagName('li'),
+		heights = [],
+		newHeight;
+		
+	for (h=0;h<items.length;h++){
+		heights.push(items[h].clientHeight);	
+	}	
+	newHeight = Math.max.apply(null, heights) + 'px';
+	for (h=0;h<items.length;h++){
+		items[h].style.height = newHeight;	
+	}
+}
 
 						

@@ -717,7 +717,7 @@ td.middle{overflow:hidden;}
 
 /********** page style G **********/
 
-/* individual Page styles */
+/********** individual Page styles **********/
 
 /* How You Can Make A Difference */
 
@@ -736,3 +736,24 @@ td.middle{overflow:hidden;}
 	height:200px !important;
 	}
 
+/* Volunteers */
+
+#volunteers .title_header{
+	height: 			745px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-Volunteer-1.png);
+	}
+
+#volunteers .two-cols{
+	margin-top:					40px;
+	}
+	
+/* Support Through Special Events */
+
+#support_through_special_events .title_header{
+	height: 			625px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-1.png);
+	}
