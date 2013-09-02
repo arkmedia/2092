@@ -495,8 +495,10 @@ td.middle{overflow:hidden;}
 	margin:0;
 	padding:0;
 	}	
+
+
 	
-.menu-lists li{overflow:hidden; height:86px;}
+.menu-lists li{overflow:hidden; min-height:86px;}
 
 .menu-lists li div{position:absolute; width:100%; text-align:center;}
 	
@@ -740,6 +742,10 @@ td.middle{overflow:hidden;}
 	height:200px !important;
 	}
 
+#how_you_can_make_a_difference .menu-content li{
+	height: 130px;
+	}
+
 /* Volunteers */
 
 #volunteers .title_header{
@@ -840,4 +846,10 @@ td.middle{overflow:hidden;}
 #your_gifts_in_action .content ul{
 	margin-left: 70px;
 	margin-top: -20px;
+	}
+
+/* Community Partnerships - See Default page style E */
+
+#community_partnerships .menu-content li{
+	height: 700px;
 	}
