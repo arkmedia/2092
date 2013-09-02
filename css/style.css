@@ -801,4 +801,22 @@ td.middle{overflow:hidden;}
 							0px -50px,
 							0px -50px;
 	}
-/* St. Joseph’s Community Foundation - See Default paghe style G */
+/* St. Joseph’s Community Foundation - See Default page style G */
+
+/* Donors */ 
+
+#donors .title_header{
+	height: 			830px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-SJCF-Donors-1.png);
+	background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;
+	}
+
+#donors .two-cols{
+	margin-top:					40px;
+	}
+
+/* St. Joseph’s Hospital Donors - See Default page style D */
