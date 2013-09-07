@@ -19,7 +19,15 @@ var footerRetracted = false, //footer state
 	footerMenus = document.getElementsByClassName('menu-parent');
 
 $(document).on('mobileinit', function(){ // set defaults
-	
+	//resize popup images
+	$( ".photopopup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".photopopup img" ).css( "max-height", maxHeight );
+        }
+    });
+
+
 	});
 
 /* use jQuery mobile page event as trigger for animation */
@@ -36,6 +44,18 @@ $('#front_page')	.on('pagehide', function(event){
 						}						
 					});
 
+
+
+$('.hasVideo')		.on('popupafteropen', function(e){
+						var vid = this.querySelector('video');
+						vid.play();
+						})
+					.on('popupafterclose', function(e){
+						var vid = this.querySelector('video');
+						vid.pause();
+						vid.currentTime = 0;
+						});
+						
 /* donor pages actions */	
 function donorGridButtonAction(event){
 	var self = event.target, // this donor category

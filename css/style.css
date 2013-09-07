@@ -543,9 +543,23 @@ td.middle{overflow:hidden;}
 	}
 
 
-/* end scrolluing menu */
+/* end scrolling menu */
 
+/* video specific styles */
 
+.hasVideo.ui-popup.ui-body-inherit{
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	background-color:transparent !important;
+	border-width: 0px; !important;
+	}	
+
+.hasVideo.ui-popup.ui-body-inherit video{
+	border: 2px solid white;
+	border-radius:5px;
+	-webkit-box-shadow: 0 0 12px rgba(0,0,0,.6);
+	box-shadow: 0 0 12px rgba(0,0,0,.6);
+	}	
 
 
 /********** page style A **********/
@@ -930,3 +944,4 @@ td.middle{overflow:hidden;}
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-TKH-Donors-1.png);
 	}
+	
