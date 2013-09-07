@@ -902,7 +902,7 @@ td.middle{overflow:hidden;}
 
 #donor_profile_ray_moser .title_header{
 	height: 			950px;	
-	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+	background-image:	url(../images/Header-Background-White_Opaque-1.png), 
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-KCC-Donors-DP_Moser-1.png);
 						
@@ -910,4 +910,23 @@ td.middle{overflow:hidden;}
 
 #donor_profile_ray_moser .two-cols{
 	margin-top:					40px;
+	}
+
+/* The Kathy Hospice - HISTORY */
+
+#kathy_hospice_history .title_header{
+	height: auto;
+	}
+	
+#kathy_hospice_history .menu-content li{
+	height:300px;
+	margin-top: 100px;
+	}
+	
+/* The Kathy Hospice Donors */
+#kathy_hospice_donor .title_header{
+	height: 			890px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-TKH-Donors-1.png);
 	}
