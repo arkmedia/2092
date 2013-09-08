@@ -342,6 +342,7 @@ function jqmIscrollviewRemoveLayerXYProps(e) {
     bottomSpacerClass:    "iscroll-bottom-spacer",
     scrollerContentClass: "iscroll-content",       // Real content of scroller, not including pull-up, pull-down
     fixedHeightClass:     "iscroll-fixed",         // Class applied to elements that match fixedHeightSelector
+	scrollbarClass:		  "no-scrollbar",			//make scroll bar dissapear 			
 
     // The widget adds the fixedHeightClass to all elements that match fixedHeightSelector.
     // Don't add the fixedHeightClass to elements manually. Use data-iscroll-fixed instead.
