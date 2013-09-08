@@ -25,9 +25,16 @@ $(document).on('mobileinit', function(){ // set defaults
             var maxHeight = $( window ).height() - 60 + "px";
             $( ".photopopup img" ).css( "max-height", maxHeight );
         }
+	
     });
-
-
+	
+	// bind action to all "back buttons"
+	var backButtons = document.getElementsByClassName('back-button');
+	for (i=0;i<backButtons.length;i++){
+		backButtons[i].addEventListener('mousedown', backOnePage, false);
+		backButtons[i].addEventListener('touchstart', backOnePage, false);
+		}
+	//$('.back-button').on('mousedown touchstart', function(){history.back();});
 	});
 
 /* use jQuery mobile page event as trigger for animation */
@@ -55,6 +62,10 @@ $('.hasVideo')		.on('popupafteropen', function(e){
 						vid.pause();
 						vid.currentTime = 0;
 						});
+
+function backOnePage(){
+	history.back();
+	}
 						
 /* donor pages actions */	
 function donorGridButtonAction(event){
