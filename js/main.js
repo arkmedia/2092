@@ -24,9 +24,57 @@ $(document).on('mobileinit', function(){ // set defaults
         popupbeforeposition: function() {
             var maxHeight = $( window ).height() - 60 + "px";
             $( ".photopopup img" ).css( "max-height", maxHeight );
-        }
-	
+        }	
     });
+	
+	/* bring up keyboard when popup form appears */
+	$('.popup-form').on({
+		popupbeforeposition: function(){
+			$('#virtualKeyboard').animate({bottom: '150px'}, 300);
+		},
+		popupafteropen: function(){
+			$(this).find('#firstname').focus();	
+		},
+		popupafterclose: function(){
+			//remove keyboard
+			$('#virtualKeyboard').animate({bottom: '-350px'}, 300);
+			//clear inputs
+			$('.hycmad_input').each(function(index, element) {
+                element.value = null;
+            });
+		}	
+	});
+	
+	/* change element modified by keayboard on focus */
+	$('.hycmad_input').on('focus', function(){
+		jsKeyboard.currentElement = $(this);	
+	});
+	 
+	//close popup on cancel 
+	$('.hycmad_cancel').on('mousedown touchstart', function(){			
+		$('.popup-form').popup('close');
+	});
+
+	
+	$('.hycmad_submit').on('mousedown touchstart', function(){
+		var form = $(this).closest('form'),
+			popup = form.closest('[data-role="popup"]'),
+			data = form.serialize();
+			
+		if(!/\d{3}-\d{3}-\d{4}/.test(form.find("#phone").val())) {
+			popup.find(".validation").html("Please provide a valid phone number");
+			return false;
+		}
+		
+		if(!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(form.find("#email").val())) {
+			popup.find(".validation").html("Please provide a valid email");
+			return false;
+		}
+		
+		$.post('./backend/hycmad_form_backend.php', data, function(resp) {			
+			$('.popup-form').popup('close');
+		}, "text");
+	});
 	
 	// bind action to all "back buttons"
 	var backButtons = document.getElementsByClassName('back-button');
@@ -34,8 +82,14 @@ $(document).on('mobileinit', function(){ // set defaults
 		backButtons[i].addEventListener('mousedown', backOnePage, false);
 		backButtons[i].addEventListener('touchstart', backOnePage, false);
 		}
-	//$('.back-button').on('mousedown touchstart', function(){history.back();});
+	
+	
+	
+	jsKeyboard.init("virtualKeyboard");
+	
 	});
+
+
 
 /* use jQuery mobile page event as trigger for animation */
 $('#front_page')	.on('pagehide', function(event){

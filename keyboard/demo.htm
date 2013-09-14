@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<title>Serkan Karaarslan - Software Engineer</title>
+ <link rel="stylesheet" href="css/jsKeyboard.css" type="text/css" media="screen"/>
+ <script type="text/javascript" src="js/jsKeyboard.js"></script>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+ <script type="text/javascript">
+     $(function () {
+         jsKeyboard.init("virtualKeyboard");
+         $("#txtContent").val(initText);
+     });
+     
+     function focusIt(t) {
+        // define where the cursor is to write character clicked.
+         jsKeyboard.currentElement = $(t);
+         jsKeyboard.show();
+     }
+
+     function showKeyboard(id) {
+         clean($("#" + id));
+         jsKeyboard.currentElement = $("#"+id);
+         jsKeyboard.show();
+     }
+     var isCleaned = false;
+     function clean(t) {
+         if (!isCleaned) {
+             $(t).text("");
+             isCleaned = true;
+         }
+     }
+     var initText = "click to here to start writing...";
+     function send() {
+         if ( $("#txtContent").val() != initText && $("#txtContent").val().length > 0) {
+             $("#requestForm").css("display", "none");
+             window.setTimeout('$("#feedback").html("Your request has been processing. Please wait...").css("display","block");', 100);
+             window.setTimeout('$("#feedback").html("Your request has been sent. You will see request form in 5 seconds").css("display","block");', 2000);
+             window.setTimeout('showRequestForm()', 7000);
+         }
+         else {
+             $("#feedback").html("Please write your request...").css("display","block");
+         }
+     }
+
+     function showRequestForm() {
+         $("#requestForm").css("display", "block");
+         $("#feedback").css("display", "none");
+         $("#feedback").html("");
+     }
+ </script>
+<style type="text/css">
+#requestForm {position:relative; width:500px;}
+#header {position:relative; width:500px; border:0px solid #000; height:30px; padding:10px;}
+#title {font-family:Verdana; font-size:22px; font-weight:bold; letter-spacing:1px; float:left;color:#95d757;
+        text-shadow: 0px 1px 2px #5f635b;
+        filter: dropshadow(color=#5f635b, offx=0, offy=1);
+}
+#keyboardIcon  
+{
+    position:absolute; right:15px; border:1px solid #acacac;
+    -webkit-box-shadow: 1px 1px 2px #0a0a0a;
+    -moz-box-shadow: 1px 1px 2px #0a0a0a;
+    box-shadow: 1px 1px 2px #0a0a0a; cursor:pointer;
+}
+#keyboardIcon img {width:32px; height:32px;}
+.content 
+{
+    font-family:Arial; font-size:18px; color:#000; border:2px solid #3171ad;
+    -moz-border-radius: 10px;
+    border-radius: 10px; padding:10px; color:#3c556c; resize: none;
+    overflow:hidden;
+}
+         
+.content:focus{outline-width:0;}
+.buttonSubmit
+{
+    width:80px; height:40px; font-family:Verdana; font-size:25px;color:#fff; padding:5px 0 0 12px;position:absolute; right:1px;cursor:pointer;
+    
+    text-shadow: 1px 1px 1px #9e9e9e;filter: dropshadow(color=#9e9e9e, offx=, offy=);
+    
+    background: #1E5799; /* old browsers */
+    background: -moz-linear-gradient(top, #1E5799 0%, #2989D8 50%, #207cca 51%, #7db9e8 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1E5799), color-stop(50%,#2989D8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1E5799', endColorstr='#7db9e8',GradientType=0 ); /* ie */
+
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    padding:7px 0 0 px;
+    resize: none;
+}
+#feedback {font-family:Arial; font-size:18px; color:#000; padding:10px; color:red;}
+</style>
+</head>
+<body>
+<div>
+
+
+<div id="requestForm">
+<div id="header">
+    <div id="title">Your Request</div><div id="keyboardIcon" onclick="showKeyboard('txtContent');"><img src="image/keyboardicon.png" alt=""/></div>
+</div>
+<textarea rows="6" cols="60"  id="txtContent" class="content" onfocus="jsKeyboard.focus(this);clean(this);"/></textarea>
+<div id="btnSubmit" class="buttonSubmit" onclick="send();">Send</div>
+</div>
+
+<div id="feedback"></div>
+
+<div id="virtualKeyboard">
+</div>
+</div> 
+
+</body>
+</html>

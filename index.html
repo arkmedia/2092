@@ -5,6 +5,9 @@
 <meta name="viewport" content="user-scalable=yes, initial-scale=0.5, maximum-scale=1, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <title>St. Joseph Hospital Donor Wall</title>
 
+<!-- Kiosk Keyboard.css -->
+<link rel="stylesheet" href="keyboard/css/jsKeyboard.css" type="text/css" media="screen"/>
+
 <!-- jQuery Mobile CSS -->
 <link rel="stylesheet" href="js/libs/jQM/jquery.mobile-1.4.0-alpha.2.min.css" />
 
@@ -127,7 +130,7 @@ It is about interactions on the most basic and personal level between the patien
                         </a>                   	
                     </li>
                 	<li>
-                    	<a href="#">
+                    	<a href="#hycmad_form" data-rel="popup" data-transition="fade" data-position-to="window">
                         	<div>Request Giving Information</div>
                         </a>                   	
                     </li>
@@ -138,6 +141,59 @@ It is about interactions on the most basic and personal level between the patien
                     </li>
                 </ul>
             </div>
+        </div>
+        <div data-role="popup" id="hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					<h2>Contact</h2>
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button class="ui-button hycmad_submit" type="button" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
         </div>
     </div>
 </div>
@@ -225,13 +281,66 @@ It is about interactions on the most basic and personal level between the patien
         	<div class="content-footer-links">
            		<ul>
                     <li>
-                        <a href="#">
+                        <a href="#sse_hycmad_form" data-rel="popup" data-transition="fade" data-position-to="window">
                             <div>Request Additional Information</div>
                         </a>                   	
                     </li>
                 </ul>
             </div>
         </div>
+		<div data-role="popup" id="sse_hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					<h2>Contact</h2>
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button  class="ui-button hycmad_submit" type="button" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
+        </div>        
     </div>
 </div>
 
@@ -271,13 +380,66 @@ It is about interactions on the most basic and personal level between the patien
         	<div class="content-footer-links">
            		<ul>
                     <li>
-                        <a href="#">
+                         <a href="#drm_hycmad_form" data-rel="popup" data-transition="fade" data-position-to="window">
                             <div>Request Additional Information</div>
                         </a>                   	
                     </li>
                 </ul>
             </div>
         </div>
+		<div data-role="popup" id="drm_hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					<h2>Contact</h2>
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button  class="ui-button hycmad_submit" type="button" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
+        </div>                
     </div>
 </div>
 
@@ -303,13 +465,66 @@ It is about interactions on the most basic and personal level between the patien
         	<div class="content-footer-links">
            		<ul>
                     <li>
-                        <a href="#">
+                        <a href="#ean_hycmad_form" data-rel="popup" data-transition="fade" data-position-to="window">
                             <div>Request Additional Information</div>
                         </a>                   	
                     </li>
                 </ul>
             </div>
         </div>
+		<div data-role="popup" id="ean_hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					<h2>Contact</h2>
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button  class="ui-button hycmad_submit" type="button" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
+        </div>                
     </div>
 </div>
 
@@ -335,13 +550,67 @@ It is about interactions on the most basic and personal level between the patien
         	<div class="content-footer-links">
            		<ul>
                     <li>
-                        <a href="#">
+                         <a href="#kde_hycmad_form" data-rel="popup" data-transition="fade" data-position-to="window">
                             <div>Request Additional Information</div>
                         </a>                   	
                     </li>
                 </ul>
             </div>
         </div>
+		<div data-role="popup" id="kde_hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <div data-role="header"><h2>Contact</h2></div>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button  class="ui-button hycmad_submit" type="button" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
+        </div>                
     </div>
 </div>
 
@@ -407,14 +676,66 @@ It is about interactions on the most basic and personal level between the patien
         	<div class="content-footer-links">
            		<ul>
                     <li>
-                        <a href="#">
-                            <div>Recieve Giving</div>
-                            <div>Information</div>
+                        <a href="#sjc_hycmad_form" data-rel="popup" data-position-to="window" data-transition="fade">
+                            <div>Recieve Giving Information</div>
                         </a>                   	
                     </li>
                 </ul>
             </div>
         </div>
+		<div data-role="popup" id="sjc_hycmad_form" data-overlay-theme="b" class="ui-content popup-form">
+        	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        	<form class="hycmad_from" autocomplete="off" data-ajax="false">
+				<div id="hycmad_form_div" class="ui-grid-a">
+					<h2>Contact</h2>
+					<p>
+						Please fill out the form below
+					</p>
+					<div class="ui-block-a">
+						<label for="name">First Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="First Name" type="text" name="firstname" id="firstname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Last Name:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="Last Name" type="text" name="lastname" id="lastname" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Phone:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="###-###-####" type="text" name="phone" id="phone" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="name">Email:</label>
+					</div>
+					<div class="ui-block-b">
+						<input autocomplete="off" class="hycmad_input" placeholder="user@website.com" type="text" name="email" id="email" value=""  />
+					</div>
+					<div class="ui-block-a">
+						<label for="textarea">Note:</label>
+					</div>
+					<div class="ui-block-b">
+						<textarea autocomplete="off" class="hycmad_input" placeholder="Begin your note here" cols="40" rows="8" name="message" id="message"></textarea>
+					</div>
+					<div style="text-align:right;" class="ui-block-a">
+						<button  class="ui-button hycmad_submit" type="submit" data-theme="a">
+							Submit
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button class="ui-button hycmad_cancel" type="button" data-theme="a">
+							Cancel
+						</button>
+					</div>				
+				</div>
+				<div class="validation">
+                </div>
+			</form>
+        </div>                
     </div>
 </div>
 <!-- END St. Joseph’s Community Foundation - PS/G -->        
@@ -466,7 +787,7 @@ It is about interactions on the most basic and personal level between the patien
         	<div><span class="headline">St. Joseph's Hospital</span></div>
             <div><span class="subhead">DONORS</span></div>           
     </div>
-    <div data-role="content">
+    <div data-role="content" class="donor-table">
     	<ul class="donor-grid">
         	<li data-for="25kplus">$25,000+</li>
             <li data-for="under25k">$10,000 - $24,999</li>
@@ -589,8 +910,7 @@ It is about interactions on the most basic and personal level between the patien
             <p>Gifts to the Foundation, no matter the size, are an investment in the overall organization and the health of the communities we serve.</p>
             
             <p>We are grateful for the support and appreciate the thoughtfulness of our generous donors, friends and families that span generations.</p>
-        </div>
-        
+        </div>        
     </div>
 </div>
 
@@ -1423,13 +1743,19 @@ It is about interactions on the most basic and personal level between the patien
         </div>
     </div>
 </div>
-
 <!-- END Universal Footer -->
+
+
+
+<div id="virtualKeyboard"></div>
 
 
 
 <!-- jQuery 2.x -->
 <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
+
+<!-- Kiosk Keyboar JS -->
+ <script type="text/javascript" src="keyboard/js/jsKeyboard.js"></script>
 
 <!-- Project JS -->
 <script type="text/javascript" src="js/main.js"></script>

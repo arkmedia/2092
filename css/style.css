@@ -957,3 +957,20 @@ td.middle{overflow:hidden;}
 						url(../images/2092-Header_Photo-TKH-Donors-1.png);
 	}
 	
+/* Kiosk keyboard styles */
+#virtualKeyboard{
+	border:3px solid #FFF;
+	border-radius:10px;
+	background-color:rgba(0,0,0,0.2);
+	padding:30px;
+	position:fixed;
+	width:760px;
+	left:120px;	
+	bottom:-350px;
+	z-index:99999;
+	}
+	
+.popup-form{
+	width:760px;
+	
+	}
