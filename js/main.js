@@ -30,7 +30,7 @@ $(document).on('mobileinit', function(){ // set defaults
 	/* bring up keyboard when popup form appears */
 	$('.popup-form').on({
 		popupbeforeposition: function(){
-			$('#virtualKeyboard').animate({bottom: '150px'}, 300);
+			$('#virtualKeyboard').animate({bottom: '250px'}, 300);
 		},
 		popupafteropen: function(){
 			$(this).find('#firstname').focus();	
@@ -51,7 +51,7 @@ $(document).on('mobileinit', function(){ // set defaults
 	});
 	 
 	//close popup on cancel 
-	$('.hycmad_cancel').on('mousedown touchstart', function(){			
+	$('.hycmad_cancel').on('mousedown touchstart', function(){	
 		$('.popup-form').popup('close');
 	});
 
@@ -60,13 +60,28 @@ $(document).on('mobileinit', function(){ // set defaults
 		var form = $(this).closest('form'),
 			popup = form.closest('[data-role="popup"]'),
 			data = form.serialize();
-			
-		if(!/\d{3}-\d{3}-\d{4}/.test(form.find("#phone").val())) {
-			popup.find(".validation").html("Please provide a valid phone number");
+		
+		// Validation for First Name
+		if(form.find("[name='firstname']").val().length == 0) {
+			popup.find(".validation").html("Please enter your first name");
 			return false;
 		}
 		
-		if(!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(form.find("#email").val())) {
+		// Validation for Last name
+		if(form.find("[name='lastname']").val().length == 0) {
+			popup.find(".validation").html("Please enter your last name");
+			return false;
+		}		
+		
+			
+		var phone_number = form.find("[name='phone']").val().replace(/\s+|\./g, "");
+		if (!phone_number.length > 9 || !phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/)){
+			popup.find(".validation").html("Please provide a valid phone number");
+			return false;
+			} 	
+			
+		
+		if(!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(form.find("[name='email']").val())) {
 			popup.find(".validation").html("Please provide a valid email");
 			return false;
 		}

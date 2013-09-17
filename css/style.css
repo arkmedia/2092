@@ -974,3 +974,9 @@ td.middle{overflow:hidden;}
 	width:760px;
 	
 	}
+
+.popup-form [data-role="header"]{
+	border-radius: 10px 10px 0 0;
+	
+	}
+	
