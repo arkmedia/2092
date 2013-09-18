@@ -39,6 +39,8 @@
 	max-width:1080px;	
 }
 
+
+
 /* body matches HD Screen */
 
 body{
@@ -101,7 +103,14 @@ a, a:active, a:visited{
 	text-decoration:	none;	
 	color:				inherit !important;
 	}
+/*jQuery mobile overrides */
+.ui-page {
+	color: #584b40 !important;
+	}
 
+.ui-bar-a, .ui-overlay-a .ui-bar-inherit, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit, .header-text, .content-footer-links, content-footer-more{
+	color: #584b40 !important;
+	}
 
 /********** General Page styles **********/
 
