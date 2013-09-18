@@ -4,11 +4,10 @@
 var footerRetracted = false, //footer state
 
 	/* donor list variables */
-	donorGridButtons = document.querySelectorAll('.page_style_d .donor-grid li'),
-	donorGridButtonsLength = donorGridButtons.length,
-	lists =  document.querySelectorAll('.donor-list-container ul'),
-	listsLength = lists.length,
-	
+	donorGridButtons,
+	donorGridButtonsLength,
+	lists,
+	listsLength,
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
 	
@@ -26,6 +25,9 @@ $(document).on('mobileinit', function(){ // set defaults
             $( ".photopopup img" ).css( "max-height", maxHeight );
         }	
     });
+	
+	
+	$
 	
 	/* bring up keyboard when popup form appears */
 	$('.popup-form').on({
@@ -139,7 +141,7 @@ function backOnePage(){
 /* donor pages actions */	
 function donorGridButtonAction(event){
 	var self = event.target, // this donor category
-		myList = document.getElementById(event.target.getAttribute('data-for')); //this donor categorie's list
+		myList = document.querySelector('[data-contains="' + event.target.getAttribute('data-for') + '"]'); //this donor categorie's list
 	
 	for (h=0;h<donorGridButtonsLength;h++){
 		donorGridButtons[h].classList.remove('donor-active'); // remove ative donor status on all
