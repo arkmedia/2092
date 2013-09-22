@@ -11,7 +11,7 @@ donorView.prototype = {
 		var self = this,
 			page = self.page,
 			container = self.container,
-			baseURL = 'http://www.thierryblais.com/2092',
+			baseURL = '',
 			fileURL = page.getAttribute('data-source');
 		if (fileURL != undefined || fileURL == ''){
 			$.ajax({
