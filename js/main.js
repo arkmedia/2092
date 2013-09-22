@@ -2,12 +2,6 @@
 
 /* global variables */
 var footerRetracted = false, //footer state
-
-	/* donor list variables */
-	donorGridButtons = document.querySelectorAll('.page_style_d .donor-grid li'),
-	donorGridButtonsLength = donorGridButtons.length,
-	lists =  document.querySelectorAll('.donor-list-container ul'),
-	listsLength = lists.length,
 	
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
@@ -102,6 +96,13 @@ $(document).on('mobileinit', function(){ // set defaults
 	
 	jsKeyboard.init("virtualKeyboard");
 	
+	var donors = new donorView();
+	donors.getContent();
+
+	
+	/* load donor lists */
+	
+	
 	});
 
 
@@ -135,6 +136,36 @@ $('.hasVideo')		.on('popupafteropen', function(e){
 function backOnePage(){
 	history.back();
 	}
+		
+		
+var donorView = function(page){
+		/* donor list variables */
+	/*donorGridButtons = document.querySelectorAll('.page_style_d .donor-grid li'),
+	donorGridButtonsLength = donorGridButtons.length,
+	lists =  document.querySelectorAll('.donor-list-container ul'),
+	listsLength = lists.length,*/
+	this.page = page;
+	
+	this.getContent = function(){
+		alert(this.page.type);
+		/*$.ajax({
+			url: 'http://www.thierryblais.com/2092/donor-lists/st_josephs_hospital_donors.php',
+			dataType: 'html',
+			success: function(a,b,c){
+				document.querySelector('#st_josephs_hospital_donors .donor-table').innerHTML = a;
+			}
+		});	*/	
+	}	
+	
+}
+
+donorView.prototype = {
+	
+	//container: this.page.querySelector('.donor-list'),
+	
+	
+	
+}
 						
 /* donor pages actions */	
 function donorGridButtonAction(event){
@@ -240,10 +271,10 @@ function goToNextFooterSubMenu(event){
 
 
 /* attach appropriate mouse and touch handlers to donors list */	
-for (i=0;i<donorGridButtonsLength;i++){
+/*for (i=0;i<donorGridButtonsLength;i++){
 	donorGridButtons[i].addEventListener('mouseover', donorGridButtonAction);
 	donorGridButtons[i].addEventListener('touchstart', donorGridButtonAction);
-}
+}*/
 
 
 for (i=0;i<footerMenus.length;i++){

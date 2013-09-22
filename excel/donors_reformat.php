@@ -1,4 +1,5 @@
 <?php
+header("access-control-allow-origin: *");
 $doc = new DOMDocument();
 $doc->formatOutput = true;
 $fp = fopen('donors_reformat.csv','r') or die("can't open file");
@@ -38,6 +39,5 @@ while ($row = fgetcsv($fp)) {
 			}
 
 }
-	echo $doc->saveXML();
-	$doc->save("donors_reformat.xml")
+	echo $doc
   ?>
