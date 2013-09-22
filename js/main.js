@@ -24,7 +24,7 @@ $(document).on('mobileinit', function(){ // set defaults
 	/* bring up keyboard when popup form appears */
 	$('.popup-form').on({
 		popupbeforeposition: function(){
-			$('#virtualKeyboard').animate({bottom: '250px'}, 300);
+			$('#virtualKeyboard').animate({bottom: '200px'}, 300);
 		},
 		popupafteropen: function(){
 			$(this).find('#firstname').focus();	
@@ -93,7 +93,7 @@ $(document).on('mobileinit', function(){ // set defaults
 		}
 	
 	
-	
+	// init keyboard
 	jsKeyboard.init("virtualKeyboard");
 	
 	// init donors lists
@@ -103,13 +103,7 @@ $(document).on('mobileinit', function(){ // set defaults
 			donors = new donorView(donorPage);		
 		donors.getContent();		
 	}
-	
-
-	
-	
-	
-	
-	});
+});
 
 
 
