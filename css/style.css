@@ -651,7 +651,7 @@ td.middle{overflow:hidden;}
 	margin-top: 100px;
 	vertical-align:top;
 	display:inline-block;
-	width:620px;
+	width:600px;
 	}
 
 .page_style_d div.donor-list-container ul{
@@ -666,7 +666,7 @@ td.middle{overflow:hidden;}
 	}
 
 .page_style_d div.donor-list-container ul.default{
-	display:inline-block !important;
+	/*display:inline-block !important;*/
 	}
 
 

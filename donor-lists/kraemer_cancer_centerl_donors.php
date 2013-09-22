@@ -11,7 +11,7 @@ $catContainer = array();
 $donorListContainer = array();
 
 //get csv file
-$fp = fopen('SJH_Donor_List.csv','r') or die("can't open file");
+$fp = fopen('donors_reformat.csv','r') or die("can't open file");
 
 $count = 0;
 

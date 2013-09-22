@@ -96,11 +96,17 @@ $(document).on('mobileinit', function(){ // set defaults
 	
 	jsKeyboard.init("virtualKeyboard");
 	
-	var donors = new donorView();
-	donors.getContent();
+	// init donors lists
+	var donorPages = document.getElementsByClassName('page_style_d');
+	for (i=0;i<donorPages.length;i++){		
+		var donorPage = donorPages[i],
+			donors = new donorView(donorPage);		
+		donors.getContent();		
+	}
+	
 
 	
-	/* load donor lists */
+	
 	
 	
 	});
@@ -140,28 +146,7 @@ function backOnePage(){
 		
 
 						
-/* donor pages actions */	
-function donorGridButtonAction(event){
-	var self = event.target, // this donor category
-		myList = document.getElementById(event.target.getAttribute('data-for')); //this donor categorie's list
 	
-	for (h=0;h<donorGridButtonsLength;h++){
-		donorGridButtons[h].classList.remove('donor-active'); // remove ative donor status on all
-	}
-	self.classList.add('donor-active'); // add donor active status to self
-	
-	for (h=0;h<listsLength;h++){ //remove all lists from display
-		if (lists[h].classList.contains('default')) {lists[h].classList.remove('default');}
-		lists[h].style.display = 'none';
-		}	
-			
-	myList.style.display = 'inline-block'; // display associated list
-	if (myList.iscrollInitiated == undefined){
-		myList.iscrollInitiated = true;		
-		$(myList).iscrollview('refresh');
-		}
-	
-}	
 	
 	
 function slideOutLeft(elem, i){
@@ -241,13 +226,6 @@ function goToNextFooterSubMenu(event){
 	}	
 
 }
-
-
-/* attach appropriate mouse and touch handlers to donors list */	
-/*for (i=0;i<donorGridButtonsLength;i++){
-	donorGridButtons[i].addEventListener('mouseover', donorGridButtonAction);
-	donorGridButtons[i].addEventListener('touchstart', donorGridButtonAction);
-}*/
 
 
 for (i=0;i<footerMenus.length;i++){
