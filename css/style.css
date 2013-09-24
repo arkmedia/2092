@@ -134,7 +134,7 @@ a, a:active, a:visited{
 	}
 
 .title_header div.headline-container, .title_header div.back-button{
-	margin-top:65px;
+	margin-top:35px;
 	}
 
 .subhead{
@@ -147,14 +147,14 @@ a, a:active, a:visited{
 
 .back-button{
 	margin-top: 		30px;
-	margin-left: 		15px;
+	margin-left: 		65px;
 	position: 			absolute;
 	left:				0px;
-	top:				0px;
+	top:				25px;
 	background:			url(../images/Header-Button-Arrow_Left-Normal-1.png) no-repeat;
 	background-size:	cover;
-	width:				73px;
-	height:				73px;
+	width:				55px;
+	height:				55px;
 	}
 
 .content p{
