@@ -13,6 +13,13 @@ var footerRetracted = false, //footer state
 	footerMenus = document.getElementsByClassName('menu-parent');
 
 $(document).on('mobileinit', function(){ // set defaults
+	//force all subhead text to UPPERCASE
+	var subHeads = document.getElementsByClassName('subhead');
+	for (i=0;i<subHeads.length;i++){
+		var subHead = subHeads[i];
+			subHead.innerHTML = subHead.innerHTML.toUpperCase()
+		}
+
 	//resize popup images
 	$( ".photopopup" ).on({
         popupbeforeposition: function() {
@@ -132,6 +139,13 @@ $('.hasVideo')		.on('popupafteropen', function(e){
 						vid.pause();
 						vid.currentTime = 0;
 						});
+
+
+
+
+
+
+
 
 function backOnePage(){
 	history.back();
