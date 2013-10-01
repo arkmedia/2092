@@ -50,8 +50,8 @@ body{
 	
 	/* font */ 
 	font-family:	TradeGothicLT, Arial, Helvetica, sans-serif;	
-	font-size: 		20px;
-	line-height: 	30px;
+	font-size: 		18px;
+	line-height: 	27px;
 	color: 			#584b40;
 	text-transform:	none !important; /* jQuery Mobile applies text-transform to everything*/
 	}
@@ -134,7 +134,7 @@ a, a:active, a:visited{
 	}
 
 .title_header div.headline-container, .title_header div.back-button{
-	margin-top:35px;
+	margin-top:55px;
 	}
 
 .subhead{
@@ -230,8 +230,8 @@ a, a:active, a:visited{
 .content-footer-links ul li{
 	display: inline-block;
 	vertical-align:top;
-	width:265px;
-	padding:10px;
+	max-width:205px;
+	padding:0px 10px;
 	border-right: 2px solid #666;
 	font-family: AGaramond_SemiBoldItalic;
 	font-size: 30px;
@@ -689,13 +689,13 @@ td.middle{overflow:hidden;}
 	}
 
 .page_style_e .title_header .header-text{
-	margin:					260px 108px 200px 108px;
+	margin:					242px 108px 200px 108px;
 	text-align: 			left;
 	-webkit-column-count:	2; 
 	-webkit-column-gap:		32px;
 	font-family: 			TradeGothicLT, Arial, Helvetica, sans-serif;
-	font-size:				20px;
-	line-height:			30px;
+	font-size:				16px;
+	line-height:			24px;
 	font-weight:			normal;
 	font-variant:			normal 
 	}
@@ -768,14 +768,14 @@ td.middle{overflow:hidden;}
 /* How You Can Make A Difference */
 
 #how_you_can_make_a_difference .title_header{
-	height: 			1100px;	!important;
+	height: 			1040px;	!important;
 	background-image:	url(../images/Header-Background-White_Opaque-1.png),
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-GoG-HYCMaD-1.png);
 	}
 						
 #how_you_can_make_a_difference .title_header .header-text{
-	margin-top:					625px;
+	margin-top:					615px;
 	}
 
 #how_you_can_make_a_difference  [data-role="content"] .content-table{

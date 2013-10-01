@@ -279,7 +279,7 @@ for (i=0;i<footerContentLinks.length;i++){
 	for (h=0;h<items.length;h++){
 		heights.push(items[h].clientHeight);	
 	}	
-	newHeight = Math.max.apply(null, heights) + 'px';
+	newHeight = Math.min.apply(null, heights) + 'px';
 	for (h=0;h<items.length;h++){
 		items[h].style.height = newHeight;	
 	}
