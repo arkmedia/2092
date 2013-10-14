@@ -68,6 +68,10 @@ body{
 	display:none !important;
 	}
 
+.invisible{
+	visibility: hidden !important;
+	}
+
 /**********  Defaults **********/
 
 div[data-role="page"]{
@@ -231,7 +235,7 @@ a, a:active, a:visited{
 	display: inline-block;
 	vertical-align:top;
 	max-width:205px;
-	padding:0px 10px;
+	padding:0px 5px;
 	border-right: 2px solid #666;
 	font-family: AGaramond_SemiBoldItalic;
 	font-size: 30px;
@@ -251,15 +255,15 @@ a, a:active, a:visited{
 	z-index:9999;
 	text-align:center;
 	background-image:	url(../images/main_menu/Bottom_Menu-Background-Main-1.png), 
-						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png),
 						url(../images/main_menu/Bottom_Menu-GoG_Logo-Collapsed-1.png),
+						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png),						
 						url(../images/main_menu/Bottom_Menu-Background-White_Translucent-1.png);
 	background-position: 	0px 40px, 
-							0px 20px,
-							457px 30px,
+							457px 60px,
+							0px 20px,							
 							0px 0px;
 	background-repeat: no-repeat;
-	background-size:1080px, 1080px, auto, 1080px;;
+	background-size:1080px, auto, 1080px, 1080px;;
 	
 	/* colors */
 	color:#FFF;
@@ -287,7 +291,7 @@ a, a:active, a:visited{
 	} 
 
 .universalFooter .home-btn-containter{
-	padding-top:50px;
+	padding-top:35px;
 	}
 
 .universalFooter .home-btn-containter img{
@@ -418,8 +422,9 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
 	background-position: 				0px 140px, 
-										0px 120px,
-										457px 30px,
+	457px 60px,
+										0px 40px,
+										
 										0px 0px;
 	}
 
@@ -452,15 +457,15 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 from {
 	bottom: 				0px;
 	background-position: 	0px 40px, 
-							0px 20px,
-							457px 30px,
+							457px 60px,
+							0px 20px,							
 							0px 0px;
 	}
 to {
 	bottom: 				-795px;
 	background-position: 	0px 140px, 
-							0px 120px,
-							457px 30px,
+							457px 60px,
+							0px 120px,							
 							0px 0px;
 	}
 }
@@ -480,15 +485,15 @@ to {
 to {
 	bottom: 				0px;
 	background-position: 	0px 40px, 
-							0px 20px,
-							457px 30px,
+							457px 60px,
+							0px 20px,							
 							0px 0px;
 	}
 from {
 	bottom: 				-795px;
-	background-position: 	0px 140px, 
-							0px 120px,
-							457px 30px,
+	background-position: 	0px 140px,
+							457px 60px, 
+							0px 120px,							
 							0px 0px;
 	}
 }

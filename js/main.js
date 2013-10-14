@@ -10,7 +10,10 @@ var footerRetracted = false, //footer state
 	footerContentLinks = document.querySelectorAll('.content-footer ul'),
 	
 	/* footer data objects */
-	footerMenus = document.getElementsByClassName('menu-parent');
+	footerMenus = document.getElementsByClassName('menu-parent')
+	
+	//slider previous buttons
+	sliderPrevButtons = document.getElementsByClassName('footer-prev-btn');
 
 $(document).on('mobileinit', function(){ // set defaults
 	//force all subhead text to UPPERCASE
@@ -110,7 +113,7 @@ $(document).on('mobileinit', function(){ // set defaults
 			donors = new donorView(donorPage);		
 		donors.getContent();		
 	}
-});
+}); //END mobile init
 
 
 
@@ -198,18 +201,29 @@ function slideInRight(elem, i){
 function goToNextFooterSubMenu(event){
 	var self = this,
 		menu = $(this).closest('.menu-parent')[0],
+		siblings = menu.querySelectorAll('.footer-btn'),
 		from = menu.querySelectorAll('ul.menu-lists li div[data-cat="' + menu.footerButtonCategories[menu.currentFooterButtonCategory] + '"]'),
 		fromLength = from.length,
 		to,
 		toLength,
-		getNextCat = ((menu.currentFooterButtonCategory+1) <= (menu.footerButtonCategories.length-1)) ? (menu.currentFooterButtonCategory+1) : 0,
-		getPrevCat = ((menu.currentFooterButtonCategory-1) < 0) ? (menu.footerButtonCategories.length-1) : (menu.currentFooterButtonCategory-1);
+		FBCLength = menu.footerButtonCategories.length,
+		getNextCat = ((menu.currentFooterButtonCategory+1) <= (FBCLength-1)) ? (menu.currentFooterButtonCategory+1) : 0,
+		getPrevCat = ((menu.currentFooterButtonCategory-1) < 0) ? (FBCLength-1) : (menu.currentFooterButtonCategory-1);
+	// hide buttons if they'bve reached the end of the line
+	console.log('FBClength: ' + FBCLength + ' getNextCat: ' + getNextCat + ' getPrevCat: ' + getPrevCat);
+	for (i=0; i<siblings.length; i++){
+		var sibling = siblings[i];
+		sibling.classList.remove('invisible');		
+		if ((self.classList.contains('footer-next-btn') && (getNextCat === (FBCLength-1))) ||
+			(self.classList.contains('footer-prev-btn') && (getPrevCat === 0))){
+			self.classList.add('invisible');			
+			} 	
+		}
 	
-
 	if (self.classList.contains('footer-next-btn')){
 		/* get destination */
 		to = menu.querySelectorAll('ul.menu-lists li div[data-cat="' + menu.footerButtonCategories[getNextCat] + '"]'),
-		toLength = to.length;		
+		toLength = to.length;				
 		menu.currentFooterButtonCategory = getNextCat;
 		for (i=0;i<fromLength;i++){
 			var elem = from[i], time = i*1000;
@@ -279,10 +293,13 @@ for (i=0;i<footerContentLinks.length;i++){
 	for (h=0;h<items.length;h++){
 		heights.push(items[h].clientHeight);	
 	}	
-	newHeight = Math.min.apply(null, heights) + 'px';
+	newHeight = Math.max.apply(null, heights) + 'px';
 	for (h=0;h<items.length;h++){
 		items[h].style.height = newHeight;	
 	}
 }
 
-						
+// hide menu slider previous button on init
+for (i=0;i<sliderPrevButtons.length;i++){
+	sliderPrevButtons[i].classList.add('invisible');
+	}
