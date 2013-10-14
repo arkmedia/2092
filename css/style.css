@@ -235,15 +235,15 @@ a, a:active, a:visited{
 	display: inline-block;
 	vertical-align:top;
 	max-width:205px;
-	padding:0px 5px;
-	border-right: 2px solid #666;
+	padding:0px 2px;
+	border-left: 2px solid #666;
 	font-family: AGaramond_SemiBoldItalic;
 	font-size: 30px;
 	color: #584b40;
 	}
 	
-.content-footer-links ul li:last-child{
-	border-right: none !important;
+.content-footer-links ul li:first-child{
+	border-left: none !important;
 	}
 
 
