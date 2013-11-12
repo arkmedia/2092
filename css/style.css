@@ -228,20 +228,29 @@ a, a:active, a:visited{
 .content-footer-links ul{
 	list-style-type:none;
 	margin:0;
-	padding:0;
+	padding:0px;
 	}
 
 .content-footer-links ul li{
 	display: inline-block;
 	vertical-align:top;
-	max-width:205px;
-	padding:0px 2px;
+	width:230px;
+	margin: 0px;
+	text-align:center;
+	padding:0px 10px;
 	border-left: 2px solid #666;
 	font-family: AGaramond_SemiBoldItalic;
 	font-size: 30px;
 	color: #584b40;
 	}
 	
+.content-footer-links ul li div{
+	vertical-align:middle;
+	display: table-cell;
+	width:230px;
+	text-align:center;
+	}
+		
 .content-footer-links ul li:first-child{
 	border-left: none !important;
 	}
@@ -908,7 +917,7 @@ td.middle{overflow:hidden;}
 
 /* Community Partnerships - See Default page style E */
 
-#community_partnerships .menu-content li{
+#community_partnerships .menu-content > li{
 	height: 700px;
 	}
 

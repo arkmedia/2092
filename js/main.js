@@ -295,7 +295,10 @@ for (i=0;i<footerContentLinks.length;i++){
 	}	
 	newHeight = Math.max.apply(null, heights) + 'px';
 	for (h=0;h<items.length;h++){
-		items[h].style.height = newHeight;	
+		var thisItem = items[h];
+		thisItem.style.height = newHeight;
+		thisItem.getElementsByTagName('div')[0].style.height = newHeight;
+			
 	}
 }
 
