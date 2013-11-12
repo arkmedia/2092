@@ -418,14 +418,13 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 
 
 .universalFooter-down{
-	-webkit-animation: 					footerDown 0.5s;
+	-webkit-animation: 					footerDown 5s;
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
-	background-position: 				0px 140px, 
-	457px 60px,
-										0px 40px,
-										
-										0px 0px;
+	/*background-position: 				0px 140px, 
+										457px 60px,
+										0px 40px,										
+										0px 0px;*/
 	}
 
 .footer-title {
@@ -448,7 +447,7 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 .universalFooter-down .home-btn-containter{
 	-webkit-animation:  				ContentDown 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
-	margin-top:							140px;
+	/*margin-top:							140px;*/
 	}
 
 
@@ -456,32 +455,32 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 {
 from {
 	bottom: 				0px;
-	background-position: 	0px 40px, 
+	/*background-position: 	0px 40px, 
 							457px 60px,
 							0px 20px,							
-							0px 0px;
+							0px 0px;*/
 	}
 to {
 	bottom: 				-795px;
-	background-position: 	0px 140px, 
+	/*background-position: 	0px 140px, 
 							457px 60px,
 							0px 120px,							
-							0px 0px;
+							0px 0px;*/
 	}
 }
 
 @-webkit-keyframes ContentUp{
-	from{margin-top:140px;}
-	to{margin-top:20px;}
+	/*from{margin-top:140px;}
+	to{margin-top:20px;}*/
 	}
 
 @-webkit-keyframes ContentDown{	
-	from{margin-top:20px;}
-	to{margin-top:140px;}
+	/*from{margin-top:20px;}
+	to{margin-top:140px;}*/
 	}
 
 @-webkit-keyframes footerUp
-{
+{/*
 to {
 	bottom: 				0px;
 	background-position: 	0px 40px, 
@@ -495,19 +494,19 @@ from {
 							457px 60px, 
 							0px 120px,							
 							0px 0px;
-	}
+	}*/
 }
 
 @-webkit-keyframes footerTitleGone
 {
-from {opacity: 1;}
-to {opacity: 0;}
+/*from {opacity: 1;}
+to {opacity: 0;}*/
 }
 
 @-webkit-keyframes footerTitleAppear
 {
-from {opacity: 0;}
-to {opacity: 1;}
+/*from {opacity: 0;}
+to {opacity: 1;}*/
 }
 
 /* scrolling menus classes */
