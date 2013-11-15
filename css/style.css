@@ -746,7 +746,7 @@ td.middle{overflow:hidden;}
 	overflow:hidden;
 	}
 	
-.page_style_e .content-table-title{
+.page_style_e .content-table-title, .cursive-title{
 	font-family: AGaramond_SemiBoldItalic, Georgia, "Times New Roman", Times, serif;
 	font-variant: normal;
 	font-weight: bold;
@@ -982,7 +982,7 @@ td.middle{overflow:hidden;}
 	}
 
 #donor_profile_ray_moser .two-cols{
-	/*margin-top:					40px;*/
+	margin-top:					50px;
 	}
 
 /* The Kathy Hospice - HISTORY */
