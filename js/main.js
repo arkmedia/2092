@@ -210,7 +210,7 @@ function goToNextFooterSubMenu(event){
 		getNextCat = ((menu.currentFooterButtonCategory+1) <= (FBCLength-1)) ? (menu.currentFooterButtonCategory+1) : 0,
 		getPrevCat = ((menu.currentFooterButtonCategory-1) < 0) ? (FBCLength-1) : (menu.currentFooterButtonCategory-1);
 	// hide buttons if they'bve reached the end of the line
-	console.log('FBClength: ' + FBCLength + ' getNextCat: ' + getNextCat + ' getPrevCat: ' + getPrevCat);
+	//console.log('FBClength: ' + FBCLength + ' getNextCat: ' + getNextCat + ' getPrevCat: ' + getPrevCat);
 	for (i=0; i<siblings.length; i++){
 		var sibling = siblings[i];
 		sibling.classList.remove('invisible');		
@@ -297,7 +297,10 @@ for (i=0;i<footerContentLinks.length;i++){
 	for (h=0;h<items.length;h++){
 		var thisItem = items[h];
 		thisItem.style.height = newHeight;
-		thisItem.getElementsByTagName('div')[0].style.height = newHeight;
+		if (thisItem.getElementsByTagName('div')[0]){
+			thisItem.getElementsByTagName('div')[0].style.height = newHeight;
+		}
+		
 			
 	}
 }
