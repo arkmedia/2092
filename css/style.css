@@ -116,6 +116,10 @@ a, a:active, a:visited{
 	color: #584b40 !important;
 	}
 
+.ui-page-theme-a .content-footer-links{
+	text-shadow: 0 1px 0 #000; !important;
+	}
+
 /********** General Page styles **********/
 
 .nobr{
