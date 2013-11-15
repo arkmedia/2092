@@ -7,7 +7,7 @@ var footerRetracted = false, //footer state
 	universalFooter = document.getElementById('universalFooter'),
 	
 	/* footer content links */
-	footerContentLinks = document.querySelectorAll('.content-footer ul'),
+	footerContentLinks = document.querySelectorAll('.content-footer-links ul'),
 	
 	/* footer data objects */
 	footerMenus = document.getElementsByClassName('menu-parent')

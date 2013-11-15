@@ -234,7 +234,7 @@ a, a:active, a:visited{
 .content-footer-links ul li{
 	display: inline-block;
 	vertical-align:top;
-	width:230px;
+	width:260px;
 	margin: 0px;
 	text-align:center;
 	padding:0px 10px;
@@ -247,7 +247,7 @@ a, a:active, a:visited{
 .content-footer-links ul li div{
 	vertical-align:middle;
 	display: table-cell;
-	width:230px;
+	width:260px;
 	text-align:center;
 	}
 		
