@@ -966,6 +966,11 @@ td.middle{overflow:hidden;}
 
 /* Donors Kraemer  - See Default page style F */
 
+.page_style_f .title_header{
+	height: 880px;
+	}
+
+
 /* Donor Profile: Ray Moser */
 
 #donor_profile_ray_moser .title_header{
