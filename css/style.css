@@ -122,6 +122,8 @@ a, a:active, a:visited{
 
 /********** General Page styles **********/
 
+
+
 .nobr{
 	display:	inline-block;
 	}
@@ -914,10 +916,18 @@ td.middle{overflow:hidden;}
 	margin: 108px 120px;
 	}
 
-#your_gifts_in_action .content ul{
+
+#your_gifts_in_action .content ul li{
+	vertical-align:top;	
+	margin:6px 10px;
+	font-family:AGaramond_Regular;
+}
+/*#your_gifts_in_action .content ul{
 	margin-left: 70px;
 	margin-top: -20px;
+	position:relative;
 	}
+
 
 /* Community Partnerships - See Default page style E */
 
