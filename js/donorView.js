@@ -62,18 +62,20 @@ donorView.prototype = {
 		var self = this,
 			siblings = self.siblings,
 			target = self.target;
-			
+
 		for (h=0;h<siblings.length;h++){
 			var sibling = siblings[h];
 			sibling.target.style.display = 'none';
 			sibling.classList.remove('donor-active'); // remove active donor status on all
 		}
+
 		self.classList.add('donor-active'); // add donor active status to self
-		
+
 		target.style.display = 'block'; // display associated list
-		if (myList.iscrollInitiated == undefined){
-			myList.iscrollInitiated = true;		
-			$(myList).iscrollview('refresh');
+		
+		if (target.iscrollInitiated == undefined){
+			target.iscrollInitiated = true;		
+			$(target).iscrollview('refresh');
 		}
 	}
 }
