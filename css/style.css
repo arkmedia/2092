@@ -61,7 +61,7 @@ body{
 	}
 
 .iscroll-bottom-spacer{
-	height:275px !important;
+	height:405px !important;
 	}
 
 .no-scrollbar{
@@ -116,7 +116,13 @@ a, a:active, a:visited{
 	color: #584b40 !important;
 	}
 
+.ui-page-theme-a .content-footer-links{
+	text-shadow: 0 1px 0 #000; !important;
+	}
+
 /********** General Page styles **********/
+
+
 
 .nobr{
 	display:	inline-block;
@@ -234,7 +240,7 @@ a, a:active, a:visited{
 .content-footer-links ul li{
 	display: inline-block;
 	vertical-align:top;
-	width:230px;
+	width:260px;
 	margin: 0px;
 	text-align:center;
 	padding:0px 10px;
@@ -247,7 +253,7 @@ a, a:active, a:visited{
 .content-footer-links ul li div{
 	vertical-align:middle;
 	display: table-cell;
-	width:230px;
+	width:260px;
 	text-align:center;
 	}
 		
@@ -636,8 +642,8 @@ td.middle{overflow:hidden;}
 
 .page_style_d{
 	background: -webkit-linear-gradient(	left, 
-											rgba(50,50,50,0.3) 0px,	
-											rgba(50,50,50,0.3) 434px,
+											rgba(86,71,60,0.1) 0px,	
+											rgba(86,71,60,0.1) 434px,
 											rgba(0,0,0,0) 434px,
 											rgba(0,0,0,0) 1080px), 
 											url(../images/Page_Background-1.jpg) 
@@ -741,7 +747,7 @@ td.middle{overflow:hidden;}
 	overflow:hidden;
 	}
 	
-.page_style_e .content-table-title{
+.page_style_e .content-table-title, .cursive-title{
 	font-family: AGaramond_SemiBoldItalic, Georgia, "Times New Roman", Times, serif;
 	font-variant: normal;
 	font-weight: bold;
@@ -909,10 +915,18 @@ td.middle{overflow:hidden;}
 	margin: 108px 120px;
 	}
 
-#your_gifts_in_action .content ul{
+
+#your_gifts_in_action .content ul li{
+	vertical-align:top;	
+	margin:6px 10px;
+	font-family:AGaramond_Regular;
+}
+/*#your_gifts_in_action .content ul{
 	margin-left: 70px;
 	margin-top: -20px;
+	position:relative;
 	}
+
 
 /* Community Partnerships - See Default page style E */
 
@@ -941,7 +955,7 @@ td.middle{overflow:hidden;}
 /* Alyce & Elmore Kraemer */
 
 #alyce_elmore_kraemer .title_header{
-	height: 			690px;	
+	height: 			900px;	
 	background-image:	url(../images/Header-Background-White_Opaque-1.png),
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-KCC-Alyce_Elmore_Kraemer-1.png);
@@ -953,7 +967,7 @@ td.middle{overflow:hidden;}
 /* Caring for our community (Kraemer) */
 
 #kraemer_caring_for_our_community .title_header{
-	height: 			590px;	
+	height: 			650px;	
 	background-image:	url(../images/Header-Background-White_Opaque-1.png),
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-KCC-CfoC-1.png);
@@ -961,10 +975,15 @@ td.middle{overflow:hidden;}
 
 /* Donors Kraemer  - See Default page style F */
 
+.page_style_f .title_header{
+	height: 880px;
+	}
+
+
 /* Donor Profile: Ray Moser */
 
 #donor_profile_ray_moser .title_header{
-	height: 			950px;	
+	height: 			930px;	
 	background-image:	url(../images/Header-Background-White_Opaque-1.png), 
 						url(../images/Header-Background-White_Translucent-1.png),
 						url(../images/2092-Header_Photo-KCC-Donors-DP_Moser-1.png);
@@ -972,7 +991,7 @@ td.middle{overflow:hidden;}
 	}
 
 #donor_profile_ray_moser .two-cols{
-	/*margin-top:					40px;*/
+	margin-top:					50px;
 	}
 
 /* The Kathy Hospice - HISTORY */
