@@ -289,7 +289,9 @@ a, a:active, a:visited{
 	
 	/* others */
 	overflow: hidden;
-	-webkit-animation: footerUp 5s;
+	
+	-webkit-animation: lipDown 0.3s, footerUp 0.5s;
+	-webkit-animation-delay: 0s, 0.3s;
 	-webkit-animation-timing-function:ease-out; 
 	-webkit-transform: translatez(0);
 	}
@@ -433,38 +435,84 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 
 
 .universalFooter-down{
-	-webkit-animation: 					footerDown 5s;
+	-webkit-animation: 					footerDown 0.5s, lipUp 0.5s;
+	-webkit-animation-delay: 			0s, 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
 	background-position: 				0px 140px, /* main brown background */										
 										0px 120px, /* thick white */	
-										457px 130px, /* generations of giving */									
-										0px 100px; /* thin white */
+										457px 30px, /* generations of giving */									
+										0px 0px; /* thin white */
 	}
 
 .footer-title {
-	-webkit-animation: 					footerTitleAppear 5s; 
-	-webkit-animation-timing-function:	ease-out; 
+	
+	/*-webkit-animation-delay:			0.5s;
+	-webkit-animation: 					footerTitleAppear 0s; 
+	/*-webkit-animation-timing-function:	ease-out; */
 	}
 
 .universalFooter-down .footer-title{
-	-webkit-animation: 					footerTitleGone 5s;
+	-webkit-animation: 					stayVisible 0.5s, footerTitleGone 0.1s;
+	-webkit-animation-delay: 			0s, 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	opacity: 							0;
 	}
 
 .universalFooter .home-btn-containter{
-	-webkit-animation:  				ContentUp 5s;
+	-webkit-animation:  				ContentStay 0.3s, ContentUp 0.5s;
+	-webkit-animation-delay:			0s, 0.3s;
 	-webkit-animation-timing-function:	ease-out; 
 	margin-top:							20px;
 	}
 
 .universalFooter-down .home-btn-containter{
-	-webkit-animation:  				ContentDown 5s;
+	-webkit-animation:  				ContentDown 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	margin-top:							140px;
 	}
 
+@-webkit-keyframes stayVisible{
+	from{opacity:1}
+	to{opacity:1}	
+	}
+	
+
+@-webkit-keyframes lipUp{
+from {
+	bottom: 				-795px;
+	background-position: 	0px 140px, /* main brown background */
+							0px 120px, /* thick white */
+							457px 130px, /* generations of giving */										
+							0px 100px; /* thin white */
+	
+}
+to{
+	bottom: 				-795px;
+	background-position: 	0px 140px, /* main brown background */
+							0px 120px, /* thick white */
+							457px 30px, /* generations of giving */										
+							0px 0px; /* thin white */
+}
+	} 
+
+@-webkit-keyframes lipDown{
+from {
+	bottom: 				-795px;
+	background-position: 	0px 140px, /* main brown background */
+							0px 120px, /* thick white */
+							457px 30px, /* generations of giving */										
+							0px 0px; /* thin white */
+	
+}
+to{
+	bottom: 				-795px;
+	background-position: 	0px 140px, /* main brown background */
+							0px 120px, /* thick white */
+							457px 130px, /* generations of giving */										
+							0px 100px; /* thin white */
+}
+	} 
 
 @-webkit-keyframes footerDown 
 {
@@ -495,8 +543,20 @@ to {
 	to{margin-top:140px;}
 	}
 
+@-webkit-keyframes ContentStay{
+	from{margin-top:140px;}
+	to{margin-top:140px;}
+	}
+
 @-webkit-keyframes footerUp
 {
+from {
+	bottom: 				-795px;
+	background-position: 	0px 140px, /* main brown background */
+							0px 120px, /* thick white */		
+							457px 130px, /* generations of giving */								
+							0px 100px; /* thin white */
+	}		
 to {
 	bottom: 				0px;
 	background-position: 	0px 40px, /* main brown background */
@@ -504,25 +564,19 @@ to {
 							457px 130px, /* generations of giving */						
 							0px 0px; /* thin white */
 	}
-from {
-	bottom: 				-795px;
-	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */		
-							457px 130px, /* generations of giving */								
-							0px 100px; /* thin white */
-	}
+
 }
 
 @-webkit-keyframes footerTitleGone
 {
-/*from {opacity: 1;}
-to {opacity: 0;}*/
+from {opacity: 1;}
+to {opacity: 0;}
 }
 
 @-webkit-keyframes footerTitleAppear
 {
-/*from {opacity: 0;}
-to {opacity: 1;}*/
+from {opacity: 0;}
+to {opacity: 1;}
 }
 
 /* scrolling menus classes */
