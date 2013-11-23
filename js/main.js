@@ -13,88 +13,43 @@ var footerRetracted = false, //footer state
 	footerMenus = document.getElementsByClassName('menu-parent')
 	
 	//slider previous buttons
-	sliderPrevButtons = document.getElementsByClassName('footer-prev-btn');
-
-$(document).on('mobileinit', function(){ // set defaults
-	//force all subhead text to UPPERCASE
-	var subHeads = document.getElementsByClassName('subhead');
-	for (i=0;i<subHeads.length;i++){
-		var subHead = subHeads[i];
-			subHead.innerHTML = subHead.innerHTML.toUpperCase()
-		}
-
-	//resize popup images
-	$( ".photopopup" ).on({
-        popupbeforeposition: function() {
-            var maxHeight = $( window ).height() - 60 + "px";
-            $( ".photopopup img" ).css( "max-height", maxHeight );
-        }	
-    });
-		
-	// bind action to all "back buttons"
-	var backButtons = document.getElementsByClassName('back-button');
-	for (i=0;i<backButtons.length;i++){
-		backButtons[i].addEventListener('mousedown', backOnePage, false);
-		backButtons[i].addEventListener('touchstart', backOnePage, false);
-		}
-		
-	// init keyboard
-	jsKeyboard.init("virtualKeyboard");
+	sliderPrevButtons = document.getElementsByClassName('footer-prev-btn'),
 	
-	// init donors lists
-	var donorPages = document.getElementsByClassName('page_style_d');
-	for (i=0;i<donorPages.length;i++){		
-		var donorPage = donorPages[i],
-			donors = new donorView(donorPage);		
-		donors.getContent();		
-	}
-}); //END mobile init
+	//subheader elements
+	subHeads = document.getElementsByClassName('subhead'),
+	
+	//get all back buttons
+	backButtons = document.getElementsByClassName('back-button'),
+	
+	//get donor list pages
+	donorPages = document.getElementsByClassName('page_style_d');
 
 
+//force all subhead text to UPPERCASE
+for (i=0;i<subHeads.length;i++){
+	var subHead = subHeads[i];
+	subHead.innerHTML = subHead.innerHTML.toUpperCase();
+}
+	
+// bind action to all "back buttons"
+for (i=0;i<backButtons.length;i++){
+	backButtons[i].addEventListener('mousedown', backOnePage, false);
+	backButtons[i].addEventListener('touchstart', backOnePage, false);
+}
+	
+// init donors lists
+for (i=0;i<donorPages.length;i++){		
+	var donorPage = donorPages[i],
+		donors = new donorView(donorPage);		
+	donors.getContent();		
+}
 
-/* use jQuery mobile page event as trigger for animation */
-$('#front_page')	.on('pagehide', function(event){ //retract main menu when you leave front page
-						if (!footerRetracted){
-							universalFooter.classList.add('universalFooter-down');
-							footerRetracted = true;
-						}
-					})
-					.on('pageshow', function(event){ //retract main menu when you leave front page
-						if (footerRetracted){
-							universalFooter.classList.remove('universalFooter-down');
-							footerRetracted = false;
-						}						
-					});
-
-
-
-$('.hasVideo')		.on('popupafteropen', function(e){
-						var vid = this.querySelector('video');
-						vid.play();
-						})
-					.on('popupafterclose', function(e){
-						var vid = this.querySelector('video');
-						vid.pause();
-						vid.currentTime = 0;
-						});
-
-
-
-
-
-
-
-
+// function to bind back buttons
 function backOnePage(){
 	history.back();
 	}
-		
-		
 
-						
-	
-	
-	
+// slide content out to left	
 function slideOutLeft(elem, i){
 	var time = i*200;
 	setTimeout(function(){
@@ -103,8 +58,9 @@ function slideOutLeft(elem, i){
 		elem.classList.add('slideOut'); 
 		elem.classList.add('slideOutLeft');
 	}, time);
-	}
+}
 
+//slide content in from left
 function slideInLeft(elem, i){
 	var time = i*200;
 	setTimeout(function(){
@@ -112,8 +68,9 @@ function slideInLeft(elem, i){
 		elem.classList.add('slideIn'); 
 		elem.classList.add('slideInLeft');
 	}, time);
-	}
+}
 
+//slide content out to right
 function slideOutRight(elem, i){
 	var time = i*200;
 	setTimeout(function(){
@@ -122,8 +79,9 @@ function slideOutRight(elem, i){
 		elem.classList.add('slideOut'); 
 		elem.classList.add('slideOutRight');
 	}, time);
-	}
+}
 
+//slide content in from right
 function slideInRight(elem, i){
 	var time = i*200;
 	setTimeout(function(){
@@ -131,8 +89,9 @@ function slideInRight(elem, i){
 		elem.classList.add('slideIn'); 
 		elem.classList.add('slideInRight');
 	}, time);
-	}
+}
 
+//manage next menu animation
 function goToNextFooterSubMenu(event){
 	var self = this,
 		menu = $(this).closest('.menu-parent')[0],
@@ -144,16 +103,16 @@ function goToNextFooterSubMenu(event){
 		FBCLength = menu.footerButtonCategories.length,
 		getNextCat = ((menu.currentFooterButtonCategory+1) <= (FBCLength-1)) ? (menu.currentFooterButtonCategory+1) : 0,
 		getPrevCat = ((menu.currentFooterButtonCategory-1) < 0) ? (FBCLength-1) : (menu.currentFooterButtonCategory-1);
+		
 	// hide buttons if they'bve reached the end of the line
-	//console.log('FBClength: ' + FBCLength + ' getNextCat: ' + getNextCat + ' getPrevCat: ' + getPrevCat);
 	for (i=0; i<siblings.length; i++){
 		var sibling = siblings[i];
 		sibling.classList.remove('invisible');		
 		if ((self.classList.contains('footer-next-btn') && (getNextCat === (FBCLength-1))) ||
 			(self.classList.contains('footer-prev-btn') && (getPrevCat === 0))){
 			self.classList.add('invisible');			
-			} 	
-		}
+		} 	
+	}
 	
 	if (self.classList.contains('footer-next-btn')){
 		/* get destination */
@@ -181,10 +140,9 @@ function goToNextFooterSubMenu(event){
 			slideInRight(elem, i);		
 		}
 	}	
-
 }
 
-
+//bind animation to footer menu items
 for (i=0;i<footerMenus.length;i++){
 		var thisFooterMenu = footerMenus[i];
 		
@@ -234,13 +192,11 @@ for (i=0;i<footerContentLinks.length;i++){
 		thisItem.style.height = newHeight;
 		if (thisItem.getElementsByTagName('div')[0]){
 			thisItem.getElementsByTagName('div')[0].style.height = newHeight;
-		}
-		
-			
+		}	
 	}
 }
 
 // hide menu slider previous button on init
 for (i=0;i<sliderPrevButtons.length;i++){
 	sliderPrevButtons[i].classList.add('invisible');
-	}
+}
