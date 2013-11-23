@@ -22,7 +22,10 @@ var footerRetracted = false, //footer state
 	backButtons = document.getElementsByClassName('back-button'),
 	
 	//get donor list pages
-	donorPages = document.getElementsByClassName('page_style_d');
+	donorPages = document.getElementsByClassName('page_style_d'),
+	
+	//animation timers
+	animations = {cascadeDelay: 200, contentSlide: 1000};
 
 
 //force all subhead text to UPPERCASE
@@ -51,7 +54,7 @@ function backOnePage(){
 
 // slide content out to left	
 function slideOutLeft(elem, i){
-	var time = i*200;
+	var time = i*animations.cascadeDelay;
 	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('gone');
@@ -62,7 +65,7 @@ function slideOutLeft(elem, i){
 
 //slide content in from left
 function slideInLeft(elem, i){
-	var time = i*200;
+	var time = i*animations.cascadeDelay;
 	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('slideIn'); 
@@ -72,7 +75,7 @@ function slideInLeft(elem, i){
 
 //slide content out to right
 function slideOutRight(elem, i){
-	var time = i*200;
+	var time = i*animations.cascadeDelay;
 	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('gone'); 
@@ -83,7 +86,7 @@ function slideOutRight(elem, i){
 
 //slide content in from right
 function slideInRight(elem, i){
-	var time = i*200;
+	var time = i*animations.cascadeDelay;
 	setTimeout(function(){
 		elem.setAttribute('class', '');
 		elem.classList.add('slideIn'); 
@@ -120,11 +123,11 @@ function goToNextFooterSubMenu(event){
 		toLength = to.length;				
 		menu.currentFooterButtonCategory = getNextCat;
 		for (i=0;i<fromLength;i++){
-			var elem = from[i], time = i*1000;
+			var elem = from[i], time = i*animations.contentSlide;
 			slideOutLeft(elem, i);		
 		}
 		for (i=0;i<toLength;i++){
-			var elem = to[i], time = i*1000;
+			var elem = to[i], time = i*animations.contentSlide;
 			slideInLeft(elem, i);		
 		}
 	} else if (self.classList.contains('footer-prev-btn')){
@@ -132,11 +135,11 @@ function goToNextFooterSubMenu(event){
 		toLength = to.length;	
 		menu.currentFooterButtonCategory = getPrevCat;
 		for (i=0;i<fromLength;i++){
-			var elem = from[i], time = i*1000;
+			var elem = from[i], time = i*animations.contentSlide;
 			slideOutRight(elem, i);		
 		}
 		for (i=0;i<toLength;i++){
-			var elem = to[i], time = i*1000;
+			var elem = to[i], time = i*animations.contentSlide;
 			slideInRight(elem, i);		
 		}
 	}	
