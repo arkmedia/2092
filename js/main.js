@@ -30,79 +30,14 @@ $(document).on('mobileinit', function(){ // set defaults
             $( ".photopopup img" ).css( "max-height", maxHeight );
         }	
     });
-	
-	/* bring up keyboard when popup form appears */
-	$('.popup-form').on({
-		popupbeforeposition: function(){
-			$('#virtualKeyboard').animate({bottom: '200px'}, 300);
-		},
-		popupafteropen: function(){
-			$(this).find('#firstname').focus();	
-		},
-		popupafterclose: function(){
-			//remove keyboard
-			$('#virtualKeyboard').animate({bottom: '-350px'}, 300);
-			//clear inputs
-			$('.hycmad_input').each(function(index, element) {
-                element.value = null;
-            });
-		}	
-	});
-	
-	/* change element modified by keayboard on focus */
-	$('.hycmad_input').on('focus', function(){
-		jsKeyboard.currentElement = $(this);	
-	});
-	 
-	//close popup on cancel 
-	$('.hycmad_cancel').on('mousedown touchstart', function(){	
-		$('.popup-form').popup('close');
-	});
-
-	
-	$('.hycmad_submit').on('mousedown touchstart', function(){
-		var form = $(this).closest('form'),
-			popup = form.closest('[data-role="popup"]'),
-			data = form.serialize();
 		
-		// Validation for First Name
-		if(form.find("[name='firstname']").val().length == 0) {
-			popup.find(".validation").html("Please enter your first name");
-			return false;
-		}
-		
-		// Validation for Last name
-		if(form.find("[name='lastname']").val().length == 0) {
-			popup.find(".validation").html("Please enter your last name");
-			return false;
-		}		
-		
-			
-		var phone_number = form.find("[name='phone']").val().replace(/\s+|\./g, "");
-		if (!phone_number.length > 9 || !phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/)){
-			popup.find(".validation").html("Please provide a valid phone number");
-			return false;
-			} 	
-			
-		
-		if(!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(form.find("[name='email']").val())) {
-			popup.find(".validation").html("Please provide a valid email");
-			return false;
-		}
-		
-		$.post('./backend/hycmad_form_backend.php', data, function(resp) {			
-			$('.popup-form').popup('close');
-		}, "text");
-	});
-	
 	// bind action to all "back buttons"
 	var backButtons = document.getElementsByClassName('back-button');
 	for (i=0;i<backButtons.length;i++){
 		backButtons[i].addEventListener('mousedown', backOnePage, false);
 		backButtons[i].addEventListener('touchstart', backOnePage, false);
 		}
-	
-	
+		
 	// init keyboard
 	jsKeyboard.init("virtualKeyboard");
 	
@@ -118,13 +53,13 @@ $(document).on('mobileinit', function(){ // set defaults
 
 
 /* use jQuery mobile page event as trigger for animation */
-$('#front_page')	.on('pagehide', function(event){
+$('#front_page')	.on('pagehide', function(event){ //retract main menu when you leave front page
 						if (!footerRetracted){
 							universalFooter.classList.add('universalFooter-down');
 							footerRetracted = true;
 						}
 					})
-					.on('pageshow', function(event){
+					.on('pageshow', function(event){ //retract main menu when you leave front page
 						if (footerRetracted){
 							universalFooter.classList.remove('universalFooter-down');
 							footerRetracted = false;
