@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* video specific styles */
+
+.hasVideo.ui-popup.ui-body-inherit{
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	background-color:transparent !important;
+	border-width: 0px; !important;
+	}	
+
+.hasVideo.ui-popup.ui-body-inherit video{
+	border: 2px solid white;
+	border-radius:5px;
+	-webkit-box-shadow: 0 0 12px rgba(0,0,0,.6);
+	box-shadow: 0 0 12px rgba(0,0,0,.6);
+	}	

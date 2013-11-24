@@ -25,7 +25,16 @@ var footerRetracted = false, //footer state
 	donorPages = document.getElementsByClassName('page_style_d'),
 	
 	//animation timers
-	animations = {cascadeDelay: 200, contentSlide: 1000};
+	animations = {cascadeDelay: 200, contentSlide: 1000},
+	
+	ambientMenu = document.getElementById('ambient-menu'),
+	ambientTouch = document.getElementById('ambient-touch'),
+	ambientAnimations = {menuDown: 300, ambientTimerMinutes: 0.05},
+	
+	//Ambient state timer object
+	ambientTimer = null,
+	
+	ambientState = true;
 
 
 //force all subhead text to UPPERCASE
@@ -203,3 +212,6 @@ for (i=0;i<footerContentLinks.length;i++){
 for (i=0;i<sliderPrevButtons.length;i++){
 	sliderPrevButtons[i].classList.add('invisible');
 }
+
+
+

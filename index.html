@@ -13,6 +13,11 @@
 
 <!-- Project CSS -->
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/universal-footer.css" />
+<link rel="stylesheet" href="css/scrolling-menus.css" />
+<link rel="stylesheet" href="css/video-specific.css" />
+<link rel="stylesheet" href="css/page-specific.css" />
+<link rel="stylesheet" href="css/ambient-video.css" />
 
 <!-- iScroll CSS -->
 <link rel="stylesheet" href="css/jquery.mobile.iscrollview.css" />
@@ -25,11 +30,23 @@
 <!-- Front Page -->
 
 <div data-role="page" id="front_page">
-	<div data-role="content">
-    </div>
+	<video id="videoAmbient" autoplay>
+  		<source src="video/2270-ambient_screen-SJH-video_only.mp4" type="video/mp4"> 
+	</video>
 </div>
 
 <!-- END Front Page -->
+
+<!-- Ambient lock screen -->
+
+<div id="ambient-menu" class="ambient-init ambient-container">
+  	<div class="ambient-touch-container">
+   		<img src="images/2270-Ambient_Screen_Treatment_BTN.png" id="ambient-touch" style="cursor:pointer" />
+    </div>
+  	<img src="images/2270-Ambient_Screen_Treatment_L3.png" class="ambient-bg" />
+</div>
+    
+<!-- END Ambient lock screen -->
 
 <!-- President's Message - PS/A-->
 
@@ -1370,9 +1387,11 @@ It is about interactions on the most basic and personal level between the patien
 
 <!-- Project JS -->
 <script type="text/javascript" src="js/donorView.js"></script>
-<script type="text/javascript" src="js/page_handlers.js"></script>
-<script type="text/javascript" src="js/hycmad_form.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/page-handlers.js"></script>
+<script type="text/javascript" src="js/hycmad-form.js"></script>
+<script type="text/javascript" src="js/ambient-video.js"></script>
+
 
 <!-- jQuery Mobile 1.4.x 
 Using this Alpha version for now because I want to take advantage of 

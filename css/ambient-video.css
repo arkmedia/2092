@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu-ambient-state{
+	-webkit-animation:  menuAmbientDown 0.3s;
+	bottom:-1920px;
+}
+
+.menu-ambient-off{
+	-webkit-animation:  menuAmbientUp 0.3s;
+	bottom:0px;
+}
+
+.ambient-init{
+	-webkit-animation:  stayDown 0.3s, ambientUp 0.3s;
+	-webkit-animation-delay: 0s, 0.3s;
+	bottom:0px;
+}
+
+.ambient-state-off{
+	-webkit-animation:  ambientDown 0.3s;
+	
+	bottom:-633px;	
+	}
+
+.ambient-off{	
+	top:1920px;	
+}
+
+.ambient-container{
+	position:fixed;
+	z-index:999;
+	width:1080px;
+	height:633px;
+}
+
+.ambient-bg{
+	position:absolute;
+	bottom:0px;
+}
+
+.ambient-touch-container{
+	width:100%;
+	position:absolute;
+	z-index:10;
+	top:0px;
+	text-align:center;
+}
+
+
+@-webkit-keyframes stayDown
+{
+from {bottom:-633px;}
+to {bottom:-633px;}
+}
+	
+@-webkit-keyframes ambientDown
+{
+from {bottom:0px;}
+to {bottom:-633px;}
+}
+
+@-webkit-keyframes ambientUp
+{
+from {bottom:-633px;}
+to {bottom:0px;}
+}
+
+@-webkit-keyframes menuAmbientUp
+{
+from {bottom:-1920px;}
+to {bottom:0px;}
+}
+
+@-webkit-keyframes menuAmbientDown
+{
+from {bottom:0px;}
+to {bottom:-1920px;}
+}

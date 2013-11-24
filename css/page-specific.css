@@ -1,0 +1,416 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/********** page style A **********/
+
+.page_style_a .title_header{
+	height: 			690px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-Presidents_Message-1.png);
+	}
+
+/********** page style B **********/
+
+
+.page_style_b .title_header{
+	height: 			590px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-SJH-CfoC-1.png);
+	}
+	
+/********** page style C **********/
+
+.page_style_c .content{
+	/*margin-left:	0px;
+	margin-right:	0px;
+	margin-top:		58px;*/
+	margin: 108px 0px;
+	}
+	
+.page_style_c .content p.left-side:not(.has-image){
+	margin-left:120px;
+	}
+
+.page_style_c .content p.right-side:not(.has-image){
+	margin-right:120px;
+	}
+
+/********** page style D **********/
+
+.page_style_d{
+	background: -webkit-linear-gradient(	left, 
+											rgba(86,71,60,0.1) 0px,	
+											rgba(86,71,60,0.1) 434px,
+											rgba(0,0,0,0) 434px,
+											rgba(0,0,0,0) 1080px), 
+											url(../images/Page_Background-1.jpg) 
+											!important;
+	}
+
+.page_style_d ul.donor-grid{
+	display:		inline-block;
+	width:			435px;
+	margin-top: 	100px;
+	padding:		0px;
+	list-style:		none;
+	border:			none;
+	}
+	
+.page_style_d ul.donor-grid li{
+	padding: 		25px 0px 25px 100px;
+	font-family: 	TradeGothicLT, Arial, Helvetica, sans-serif;
+	font-size:		28px;
+	line-height: 	64px;
+	color: 			#584b40;
+	border-bottom:	1px solid #FFF;
+	}
+	
+.page_style_d ul.donor-grid li.donor-active{
+	background-color:#FFFFFF;
+	}
+	
+.page_style_d div.donor-list-container{
+	margin-top: 100px;
+	vertical-align:top;
+	display:inline-block;
+	width:600px;
+	}
+
+.page_style_d div.donor-list-container ul{
+	width:			100%;
+	display:		none;
+	font-family: 	TradeGothicLT, Arial, Helvetica, sans-serif;
+	font-size:		28px;
+	line-height: 	32px;
+	color: 			#766a5e;
+	list-style:		none;
+	padding:		0px;	
+	}
+
+.page_style_d div.donor-list-container ul.default{
+	/*display:inline-block !important;*/
+	}
+
+
+.page_style_d div.donor-list-container ul li{
+	padding: 0px 20px 20px 100px;
+	}
+	
+/********** page style E **********/
+
+.page_style_e .title_header{
+	height: 			640px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png);
+	}
+
+.page_style_e .title_header .header-text{
+	margin:					242px 108px 200px 108px;
+	text-align: 			left;
+	-webkit-column-count:	2; 
+	-webkit-column-gap:		32px;
+	font-family: 			TradeGothicLT, Arial, Helvetica, sans-serif;
+	font-size:				16px;
+	line-height:			24px;
+	font-weight:			normal;
+	font-variant:			normal 
+	}
+	
+.page_style_e .title_header .header-text p{
+	margin-top:0px !important;
+	}
+
+.page_style_e [data-role="content"]{
+	background-color: rgba(86,71,60,0.1);
+	}
+	
+.page_style_e [data-role="content"] .content-table{
+	width:1080px;
+	height:500px;
+	border:none;
+	}
+
+.page_style_e [data-role="content"] table.content-table td{
+	vertical-align:top;	
+	text-align:center;
+	padding:20px;
+	}
+
+.page_style_e [data-role="content"] table.content-table td.side{
+	width:108px;
+	}
+
+.page_style_e [data-role="content"] table.content-table td.middle{
+	overflow:hidden;
+	}
+	
+.page_style_e .content-table-title, .cursive-title{
+	font-family: AGaramond_SemiBoldItalic, Georgia, "Times New Roman", Times, serif;
+	font-variant: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height:86px;
+	color:#766a5e;
+	}
+
+.page_style_e .content-table-bottom{
+	font-family: AGaramond_Regular, Georgia, "Times New Roman", Times, serif;	
+	}
+
+/********** page style F **********/
+
+.page_style_f .title_header{
+	height: 700px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-KCC-Donors-1.png);
+						
+	/*background-position: 	0px 0px,
+							0px 0px,
+							0px -200px;*/
+	}
+
+
+.page_style_f .content{
+	/*margin: 150px 295px;*/
+	margin: 108px 295px;	
+	}
+
+/********** page style G **********/
+
+/********** individual Page styles **********/
+
+/* How You Can Make A Difference */
+
+#how_you_can_make_a_difference .title_header{
+	height: 			1040px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-1.png);
+	}
+						
+#how_you_can_make_a_difference .title_header .header-text{
+	margin-top:					615px;
+	}
+
+#how_you_can_make_a_difference  [data-role="content"] .content-table{
+	height:220px !important;
+	}
+
+#how_you_can_make_a_difference .menu-content li{
+	height: 130px;
+	}
+
+
+#how_you_can_make_a_difference [data-role="content"]{
+	/*background override*/
+	background-color: rgba(0,0,0,0);
+	}
+	
+#how_you_can_make_a_difference [data-role="content"] .content-table{
+	width:1080px;
+	height:500px;
+	border:none;
+	background-color: rgba(86,71,60,0.1);
+	}
+	
+/* Volunteers */
+
+#volunteers .title_header{
+	height: 			745px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-Volunteer-1.png);
+	}
+
+#volunteers .two-cols{
+	/*margin-top:					40px;*/
+	}
+	
+/* Support Through Special Events */
+
+#support_through_special_events .title_header{
+	height: 			625px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-1.png);
+	}
+
+/* Daniel Rozek Memorial Classic Golf Outing */ 
+
+#daniel_rozek_memorial_classic_golf_outing .title_header{
+	height: 			930px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-DRMGC-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+
+#daniel_rozek_memorial_classic_golf_outing .two-cols{
+	/*margin-top:					40px;*/
+	}
+
+/* Element of Art Night */
+
+#element_of_art_night .title_header{
+	height: 			1010px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-EoA-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+
+/* Element of Art Night */
+
+#a_kentucky_derby_evening .title_header{
+	height: 			930px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-HYCMaD-STSE-KDE-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+/* St. Joseph’s Community Foundation - See Default page style G */
+
+/* Donors */ 
+
+#donors .title_header{
+	height: 			830px;	!important;
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-SJCF-Donors-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+
+#donors .two-cols{
+	/*margin-top:					40px;*/
+	}
+
+/* St. Joseph’s Hospital Donors - See Default page style D */
+
+/* Your Gifts in Action */
+
+#your_gifts_in_action .title_header{
+	/*height: 			830px;	!important;*/
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-GoG-SJCF-YGiA-1.png);
+	/*background-position: 	0px -50px,
+							0px -50px,
+							0px -50px;*/
+	}
+
+#your_gifts_in_action .content{
+	margin: 108px 120px;
+	}
+
+
+#your_gifts_in_action .content ul li{
+	vertical-align:top;	
+	margin:6px 10px;
+	font-family:AGaramond_Regular;
+}
+/*#your_gifts_in_action .content ul{
+	margin-left: 70px;
+	margin-top: -20px;
+	position:relative;
+	}
+
+
+/* Community Partnerships - See Default page style E */
+
+#community_partnerships .menu-content > li{
+	height: 700px;
+	}
+
+/* St. Joseph’s Hospital - See Default page style C */
+
+/* Caring for our Community - See Default page style B */
+
+/* Donors */
+
+#donors_stj .title_header{
+	height: 700px;
+	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-SJH-Donors-1.png);
+						
+	/*background-position: 	0px 0px,
+							0px 0px,
+							0px -200px;*/
+	}
+
+/* Alyce & Elmore Kraemer */
+
+#alyce_elmore_kraemer .title_header{
+	height: 			900px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-KCC-Alyce_Elmore_Kraemer-1.png);
+	/*background-position: 	0px 0px,
+							0px 0px,
+							0px -200px;*/
+	}
+
+/* Caring for our community (Kraemer) */
+
+#kraemer_caring_for_our_community .title_header{
+	height: 			650px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-KCC-CfoC-1.png);
+	}
+
+/* Donors Kraemer  - See Default page style F */
+
+.page_style_f .title_header{
+	height: 880px;
+	}
+
+
+/* Donor Profile: Ray Moser */
+
+#donor_profile_ray_moser .title_header{
+	height: 			930px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png), 
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-KCC-Donors-DP_Moser-1.png);
+						
+	}
+
+#donor_profile_ray_moser .two-cols{
+	margin-top:					50px;
+	}
+
+/* The Kathy Hospice - HISTORY */
+
+#kathy_hospice_history .title_header{
+	height: auto;
+	}
+	
+#kathy_hospice_history .menu-content li{
+	height:300px;
+	margin-top: 100px;
+	}
+	
+	
+/* The Kathy Hospice Donors */
+#kathy_hospice_donor .title_header{
+	height: 			890px;	
+	background-image:	url(../images/Header-Background-White_Opaque-1.png),
+						url(../images/Header-Background-White_Translucent-1.png),
+						url(../images/2092-Header_Photo-TKH-Donors-1.png);
+	}

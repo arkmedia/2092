@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* scrolling menus classes */
+
+a.footer-btn{line-height:86px; vertical-align:middle;}
+
+td.middle{overflow:hidden;}	
+
+.gone{display:none;}
+	
+.menu-lists{
+	position:relative; 
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	}	
+
+	
+.menu-lists li{overflow:hidden; min-height:86px;}
+
+.menu-lists li div{position:absolute; width:100%; text-align:center;}
+	
+.slideOut{
+	display: inherit;
+	left:100%;
+
+	}
+	
+.slideIn{
+	display: inherit;
+	left:0; 
+	}
+
+.slideInLeft{-webkit-animation: slideInLeft 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideOutLeft{-webkit-animation: slideOutLeft 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideInRight{-webkit-animation: slideInRight 0.4s;-webkit-animation-timing-function:	ease-in; }
+.slideOutRight{-webkit-animation: slideOutRight 0.4s;-webkit-animation-timing-function:	ease-in; }
+
+
+@-webkit-keyframes slideOutLeft {
+	from {left:0;}
+	to {left:-100%}
+	}
+
+@-webkit-keyframes slideInLeft {
+	from {left:100%;}
+	to {left:0}
+	}
+
+@-webkit-keyframes slideOutRight {
+	from {left:0;}
+	to {left:100%}
+	}
+
+@-webkit-keyframes slideInRight {
+	from {left:-100%;}
+	to {left:0}
+	}
+
+
+/* end scrolling menu */
