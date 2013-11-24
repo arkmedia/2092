@@ -9,6 +9,7 @@ function initAmbientState(){
 	document.body.removeEventListener('mousedown');
 	document.body.removeEventListener('mousemove');
 	
+	//init animations
 	ambientMenu.classList.remove("ambient-state-off");
 	universalFooter.classList.remove("menu-ambient-off");
 	if ($.mobile.activePage[0].id == 'front_page'){	
@@ -17,6 +18,10 @@ function initAmbientState(){
 		universalFooter.classList.add("menu-ambient-state-2");
 	}
 	
+	//resume video
+	ambientVideo.play();
+	
+	//change to front page;
 	$.mobile.changePage('#front_page');
 	
 }
@@ -30,8 +35,13 @@ function resetAmbientTimer(){
 }
 
 function breakAmbientState(){
+	//stop video
+	ambientVideo.pause();
+	
 	ambientMenu.classList.add('ambient-state-off');
 	setTimeout(function(){	
+		
+	
 		//remove ambient state from kiosk
 		universalFooter.classList.add("menu-ambient-off");	
 		universalFooter.classList.remove("menu-ambient-state");

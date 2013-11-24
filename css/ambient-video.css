@@ -3,12 +3,12 @@
 
 .menu-ambient-state{
 	-webkit-animation:  menuAmbientDown 0.5s;
-	bottom:-1920px;
+	bottom:-1071px;
 }
 
 .menu-ambient-state-2{
 	-webkit-animation:  menuAmbientDown2 0.5s;
-	bottom:-1920px;
+	bottom:-1071px;
 }
 
 .menu-ambient-off{
@@ -29,7 +29,7 @@
 	}
 
 .ambient-off{	
-	top:1920px;	
+	top:1071px;	
 }
 
 .ambient-container{
@@ -73,7 +73,7 @@ to {bottom:0px;}
 
 @-webkit-keyframes menuAmbientUp
 {
-from {bottom:-1920px;}
+from {bottom:-1071px;}
 to {bottom:0px;}
 }
 
@@ -82,7 +82,7 @@ to {bottom:0px;}
 @-webkit-keyframes menuAmbientDown
 {
 from {bottom:0px;}
-to {bottom:-1920px;}
+to {bottom:-1071px}
 }
 
 @-webkit-keyframes menuAmbientDown2
