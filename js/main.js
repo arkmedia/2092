@@ -27,9 +27,16 @@ var footerRetracted = false, //footer state
 	//animation timers
 	animations = {cascadeDelay: 200, contentSlide: 1000},
 	
+	//get ambient touch here menu
 	ambientMenu = document.getElementById('ambient-menu'),
+	
+	//get ambien touch button
 	ambientTouch = document.getElementById('ambient-touch'),
-	ambientAnimations = {menuDown: 500, ambientTimerMinutes: 0.05},
+	
+	//set ambient timers
+	ambientAnimations = {menuDown: 500, ambientTimerMinutes: 0.1},
+	
+	//get ambient video
 	ambientVideo = document.getElementById('videoAmbient'),
 	
 	//Ambient state timer object
