@@ -8,9 +8,17 @@ function initAmbientState(){
 	document.body.removeEventListener('touchend');
 	document.body.removeEventListener('mousedown');
 	document.body.removeEventListener('mousemove');
-	ambientState = true;
 	
-	$.mobile.changePage('#front_page');	
+	ambientMenu.classList.remove("ambient-state-off");
+	universalFooter.classList.remove("menu-ambient-off");
+	if ($.mobile.activePage[0].id == 'front_page'){	
+		universalFooter.classList.add("menu-ambient-state");
+	} else {
+		universalFooter.classList.add("menu-ambient-state-2");
+	}
+	
+	$.mobile.changePage('#front_page');
+	
 }
 
 function resetAmbientTimer(){
@@ -26,7 +34,8 @@ function breakAmbientState(){
 	setTimeout(function(){	
 		//remove ambient state from kiosk
 		universalFooter.classList.add("menu-ambient-off");	
-		universalFooter.classList.remove("menu-ambient-state");		
+		universalFooter.classList.remove("menu-ambient-state");
+		universalFooter.classList.remove("menu-ambient-state-2");		
 		
 		//bind event to reset ambient timer
 		document.body.addEventListener('touchstart', resetAmbientTimer, false);
@@ -35,7 +44,6 @@ function breakAmbientState(){
 		document.body.addEventListener('mousedown', resetAmbientTimer, false);
 		document.body.addEventListener('mousemove', resetAmbientTimer, false);
 		resetAmbientTimer();
-		ambientState = false;
 		
 	}, ambientAnimations.menuDown);
 }	

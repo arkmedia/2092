@@ -2,23 +2,28 @@
 /* CSS Document */
 
 .menu-ambient-state{
-	-webkit-animation:  menuAmbientDown 0.3s;
+	-webkit-animation:  menuAmbientDown 0.5s;
+	bottom:-1920px;
+}
+
+.menu-ambient-state-2{
+	-webkit-animation:  menuAmbientDown2 0.5s;
 	bottom:-1920px;
 }
 
 .menu-ambient-off{
-	-webkit-animation:  menuAmbientUp 0.3s;
+	-webkit-animation:  menuAmbientUp 0.5s;
 	bottom:0px;
 }
 
 .ambient-init{
-	-webkit-animation:  stayDown 0.3s, ambientUp 0.3s;
-	-webkit-animation-delay: 0s, 0.3s;
+	-webkit-animation:  stayDown 0.5s, ambientUp 0.5s;
+	-webkit-animation-delay: 0s, 0.5s;
 	bottom:0px;
 }
 
 .ambient-state-off{
-	-webkit-animation:  ambientDown 0.3s;
+	-webkit-animation:  ambientDown 0.5s;
 	
 	bottom:-633px;	
 	}
@@ -72,8 +77,16 @@ from {bottom:-1920px;}
 to {bottom:0px;}
 }
 
+
+
 @-webkit-keyframes menuAmbientDown
 {
 from {bottom:0px;}
 to {bottom:-1920px;}
+}
+
+@-webkit-keyframes menuAmbientDown2
+{
+from {bottom:-795px;}
+to {bottom:-1071px;}
 }

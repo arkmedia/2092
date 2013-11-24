@@ -26,13 +26,13 @@ $('#front_page')	.on('pagehide', function(event){ //retract main menu when you l
 							//remove footer down state
 							universalFooter.classList.remove('universalFooter-down');
 							footerRetracted = false;
-							if (ambientState) {
+							/*if (ambientState) {
 								setTimeout(function(){
 								ambientMenu.classList.remove("ambient-state-off");
 								universalFooter.classList.remove("menu-ambient-off");	
 								universalFooter.classList.add("menu-ambient-state");
 								}, 1000);
-							}
+							}*/
 						}						
 					});
 

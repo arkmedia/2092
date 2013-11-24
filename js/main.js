@@ -29,12 +29,10 @@ var footerRetracted = false, //footer state
 	
 	ambientMenu = document.getElementById('ambient-menu'),
 	ambientTouch = document.getElementById('ambient-touch'),
-	ambientAnimations = {menuDown: 300, ambientTimerMinutes: 0.05},
+	ambientAnimations = {menuDown: 500, ambientTimerMinutes: 0.05},
 	
 	//Ambient state timer object
-	ambientTimer = null,
-	
-	ambientState = true;
+	ambientTimer = null;
 
 
 //force all subhead text to UPPERCASE
