@@ -36,7 +36,7 @@ while ($row = fgetcsv($fp)) {
 
 
 ?>
-<ul class="donor-grid" data-iscroll>
+<ul class="donor-grid">
 <?php foreach ($donorListContainer as $key => $donorList): ?>
 	<li data-for="<?php echo $key; ?>"><?php echo $key; ?></li>
 <?php endforeach;  ?>
