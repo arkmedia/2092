@@ -34,7 +34,7 @@ var footerRetracted = false, //footer state
 	ambientTouch = document.getElementById('ambient-touch'),
 	
 	//set ambient timers
-	ambientAnimations = {menuDown: 500, ambientTimerMinutes: 100},
+	ambientAnimations = {menuDown: 500, ambientTimerMinutes: 5},
 	
 	//get ambient video
 	ambientVideo = document.getElementById('videoAmbient'),
