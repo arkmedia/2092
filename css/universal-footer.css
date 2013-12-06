@@ -182,7 +182,7 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
 	background-position: 				0px 140px, /* main brown background */	
-										457px 60px, /* generations of giving */									
+										457px 65px, /* generations of giving */									
 										0px 40px, /* thick white */											
 										0px 0px; /* thin white */
 	}
@@ -224,35 +224,34 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 from {
 	bottom: 				-795px;
 	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */
-							457px 130px, /* generations of giving */										
-							0px 100px; /* thin white */
-	
+							457px 160px, /* generations of giving */	
+							0px 120px, /* thick white */																
+							0px 100px; /* thin white */	
 }
 to{
 	bottom: 				-795px;
-	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */
-							457px 30px, /* generations of giving */										
-							0px 0px; /* thin white */
+	background-position: 	0px 140px, /* main brown background */							
+							457px 65px, /* generations of giving */	
+							0px 40px, /* thick white */									
+							0px 0px; /* thin white */			
 }
 	} 
 
 @-webkit-keyframes lipDown{
 from {
 	bottom: 				-795px;
-	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */
-							457px 30px, /* generations of giving */										
-							0px 0px; /* thin white */
+	background-position: 	0px 140px, /* main brown background */							
+							457px 65px, /* generations of giving */	
+							0px 40px, /* thick white */									
+							0px 0px; /* thin white */	
 	
 }
 to{
 	bottom: 				-795px;
 	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */
-							457px 130px, /* generations of giving */										
-							0px 100px; /* thin white */
+							457px 160px, /* generations of giving */	
+							0px 120px, /* thick white */																
+							0px 100px; /* thin white */	
 }
 	} 
 
@@ -260,17 +259,17 @@ to{
 {
 from {
 	bottom: 				0px;
-	background-position: 	0px 40px, /* main brown background */
-							0px 20px, /* thick white */		
-							457px 130px, /* generations of giving */					
+	background-position: 	0px 40px, /* main brown background */								
+							457px 130px, /* generations of giving */
+							0px 20px, /* thick white */						
 							0px 0px; /* thin white */
 	
 	}
 to {
 	bottom: 				-795px;
-	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */
-							457px 130px, /* generations of giving */										
+	background-position: 	0px 140px, /* main brown background */							
+							457px 130px, /* generations of giving */
+							0px 120px, /* thick white */										
 							0px 100px; /* thin white */
 	}
 }
@@ -294,16 +293,16 @@ to {
 {
 from {
 	bottom: 				-795px;
-	background-position: 	0px 140px, /* main brown background */
-							0px 120px, /* thick white */		
-							457px 130px, /* generations of giving */								
+	background-position: 	0px 140px, /* main brown background */								
+							457px 130px, /* generations of giving */
+							0px 120px, /* thick white */									
 							0px 100px; /* thin white */
 	}		
 to {
 	bottom: 				0px;
-	background-position: 	0px 40px, /* main brown background */
-							0px 20px, /* thick white */	
-							457px 130px, /* generations of giving */						
+	background-position: 	0px 40px, /* main brown background */	
+							457px 130px, /* generations of giving */
+							0px 20px, /* thick white */						
 							0px 0px; /* thin white */
 	}
 
