@@ -125,11 +125,6 @@ a.footer-btn img.normal, a.footer-btn:active img.active{
 a.footer-btn img.active, a.footer-btn:active img.normal{
 	display:none;
 	}	
-	
-.universalFooter .footer-btn img{
-	width:48px;
-	height:48px;
-	}
 
 .footer-nav-sub-menu{
 	width: 100%;
@@ -167,7 +162,7 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 .main-menu-table-title a{display:block; width:100%; height:100%}
 
 .universalFooter td.side {vertical-align:top; width:200px;}
-.universalFooter td.side div{padding-top:20px;}
+.universalFooter td.side div{padding-top:10px;}
 
 .universalFooter-up{
 	-webkit-animation: lipDown 0.3s, footerUp 0.5s;
