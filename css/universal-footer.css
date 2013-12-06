@@ -162,7 +162,7 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 .main-menu-table-title a{display:block; width:100%; height:100%}
 
 .universalFooter td.side {vertical-align:top; width:200px;}
-.universalFooter td.side div{padding-top:10px;}
+.universalFooter td.side div{padding-top:11px;}
 
 .universalFooter-up{
 	-webkit-animation: lipDown 0.3s, footerUp 0.5s;
