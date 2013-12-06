@@ -9,16 +9,16 @@
 	bottom: 0px;
 	z-index:9999;
 	text-align:center;
-	background-image:	url(../images/main_menu/Bottom_Menu-Background-Main-1.png), /* main brown background */						
-						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png),	/* thick white */	
-						url(../images/main_menu/Bottom_Menu-GoG_Logo-Collapsed-1.png), /* generations of giving */			
+	background-image:	url(../images/main_menu/Bottom_Menu-Background-Main-1.png), /* main brown background */	
+						url(../images/main_menu/Bottom_Menu-GoG_Logo-Collapsed-1.png), /* generations of giving */						
+						url(../images/main_menu/Bottom_Menu-Background-White_Opaque-1.png),	/* thick white */									
 						url(../images/main_menu/Bottom_Menu-Background-White_Translucent-1.png); /* thin white */
-	background-position: 	0px 40px, /* main brown background */							
-							0px 20px, /* thick white */	
-							457px 130px, /* generations of giving */					
+	background-position: 	0px 40px, /* main brown background */														
+							457px 130px, /* generations of giving */	
+							0px 20px, /* thick white */					
 							0px 0px; /* thin white */
 	background-repeat: no-repeat;
-	background-size:1080px, 1080px, auto, 1080px;;
+	background-size:1080px, auto, 1080px, 1080px;;
 	
 	/* colors */
 	color: #d0cab9;
@@ -181,9 +181,9 @@ a.footer-btn img.active, a.footer-btn:active img.normal{
 	-webkit-animation-delay: 			0s, 0.5s;
 	-webkit-animation-timing-function:	ease-out; 
 	bottom:								-795px;
-	background-position: 				0px 140px, /* main brown background */										
-										0px 120px, /* thick white */	
-										457px 30px, /* generations of giving */									
+	background-position: 				0px 140px, /* main brown background */	
+										457px 60px, /* generations of giving */									
+										0px 40px, /* thick white */											
 										0px 0px; /* thin white */
 	}
 

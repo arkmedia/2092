@@ -75,7 +75,8 @@ body{
 /**********  Defaults **********/
 
 div[data-role="page"]{
-	background:		url(../images/Page_Background-1.jpg);
+	/*background:		url(../images/Page_Background-1.jpg);*/
+	background-color: #000;
 	width:			1080px;
 	height:			1920px;
 	font-smooth:	always;
