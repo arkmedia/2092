@@ -66,7 +66,7 @@ $('.hycmad_submit').on('mousedown touchstart', function(){
 		} 	
 		
 	// Verify for valid email address
-	if(!validEmailRegex.test(form.find("[name='email']").val())) {
+	if(!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(form.find("[name='email']").val())) {
 		popup.find(".validation").html("Please provide a valid email");
 		return false;
 	}
