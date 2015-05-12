@@ -109,6 +109,26 @@ function slideInRight(elem, i){
 	}, time);
 }
 
+// toggle footer menu
+function toggleFooter(){
+	if (!footerRetracted){
+		//initate footer down animation
+		universalFooter.classList.add('universalFooter-down');
+		//clear ambien classes if they're in place
+		universalFooter.classList.remove('menu-ambient-off');
+		universalFooter.classList.remove('menu-ambient-state');
+		//clear up state
+		universalFooter.classList.remove('universalFooter-up');
+	} else {
+		//init fotter up animation
+		universalFooter.classList.add('universalFooter-up');
+		//remove footer down state
+		universalFooter.classList.remove('universalFooter-down');	
+	}	
+
+	footerRetracted = !footerRetracted;
+}
+
 //manage next menu animation
 function goToNextFooterSubMenu(event){
 	var self = this,
