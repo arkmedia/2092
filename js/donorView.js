@@ -8,7 +8,7 @@ var donorView = function(page){
 donorView.prototype = {	
 	//get content and fill donor list container
 	getContent: function(){
-		/*var self = this,
+		var self = this,
 			page = self.page,
 			container = self.container,
 			baseURL = '',
@@ -25,7 +25,7 @@ donorView.prototype = {
 					console.error('There was an error retrieving source for elementID: ' + page.id);	
 				}
 			});
-		}*/
+		}
 	},
 	
 	//bind donor list functionality
