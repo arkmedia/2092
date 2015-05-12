@@ -3,11 +3,11 @@
 
 
 function initAmbientState(){
-	document.body.removeEventListener('touchstart');
-	document.body.removeEventListener('touchmove');
-	document.body.removeEventListener('touchend');
-	document.body.removeEventListener('mousedown');
-	document.body.removeEventListener('mousemove');
+	document.body.removeEventListener('touchstart', resetAmbientTimer);
+	document.body.removeEventListener('touchmove', resetAmbientTimer);
+	document.body.removeEventListener('touchend', resetAmbientTimer);
+	document.body.removeEventListener('mousedown', resetAmbientTimer);
+	document.body.removeEventListener('mousemove', resetAmbientTimer);
 	
 	//init animations
 	ambientMenu.classList.remove("ambient-state-off");

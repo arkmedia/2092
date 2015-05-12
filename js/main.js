@@ -1,7 +1,7 @@
 // JavaScript Document
 
 /* global variables */
-var footerRetracted = false, //footer state
+var footerRetracted = true, //footer state
 	
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
@@ -209,7 +209,7 @@ for (i=0;i<footerMenus.length;i++){
 	for (h=0;h<thisFooterMenu.footerButtonsLength;h++){
 		var elem = thisFooterMenu.footerButtons[h];
 		elem.addEventListener('mousedown',goToNextFooterSubMenu);
-		elem.addEventListener('touchstart',goToNextFooterSubMenu);
+		//elem.addEventListener('touchstart',goToNextFooterSubMenu);
 	}
 }
 
