@@ -52,6 +52,11 @@
 	width: 6.67%;
 	}
 
+.universalFooter .home-btn-containter a:not(:active) img.active,
+.universalFooter .home-btn-containter a:active img.normal{
+	display:none;
+}
+
 .universalFooter .footer-title img{
 	width:27.77%;
 	}
