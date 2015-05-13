@@ -53,8 +53,8 @@ function breakAmbientState(){
 		document.body.addEventListener('touchstart', resetAmbientTimer, false);
 		document.body.addEventListener('touchmove', resetAmbientTimer, false);
 		document.body.addEventListener('touchend', resetAmbientTimer, false);
-		document.body.addEventListener('mousedown', resetAmbientTimer, false);
-		document.body.addEventListener('mousemove', resetAmbientTimer, false);
+		//document.body.addEventListener('mousedown', resetAmbientTimer, false);
+		//document.body.addEventListener('mousemove', resetAmbientTimer, false);
 		resetAmbientTimer();
 		
 	}, ambientAnimations.menuDown);
