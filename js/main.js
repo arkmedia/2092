@@ -1,7 +1,7 @@
 // JavaScript Document
 
 /* global variables */
-var footerRetracted = true, //footer state
+var footerRetracted = false, //footer state
 	
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
@@ -109,25 +109,42 @@ function slideInRight(elem, i){
 	}, time);
 }
 
-// toggle footer menu
-function toggleFooter(){
-	if (!footerRetracted){
+
+function footerControls(){
+	var footerControls = this;
+
+	footerControls.up = function(){
+		//init fotter up animation
+		universalFooter.classList.add('universalFooter-up');
+		//remove footer down state
+		universalFooter.classList.remove('universalFooter-down');
+
+		footerRetracted = false;	
+	}
+
+	footerControls.down = function(){
 		//initate footer down animation
 		universalFooter.classList.add('universalFooter-down');
 		//clear ambien classes if they're in place
 		universalFooter.classList.remove('menu-ambient-off');
 		universalFooter.classList.remove('menu-ambient-state');
 		//clear up state
-		universalFooter.classList.remove('universalFooter-up');
-	} else {
-		//init fotter up animation
-		universalFooter.classList.add('universalFooter-up');
-		//remove footer down state
-		universalFooter.classList.remove('universalFooter-down');	
-	}	
+		universalFooter.classList.remove('universalFooter-up');	
 
-	footerRetracted = !footerRetracted;
+		footerRetracted = true;	
+	}
+
+	footerControls.toggle = function(){
+		if (!footerRetracted){
+			footerControls.down()
+		} else {
+			footerControls.up();
+		}
+	}
+
+	return footerControls;
 }
+
 
 //manage next menu animation
 function goToNextFooterSubMenu(event){

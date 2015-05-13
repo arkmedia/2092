@@ -6,8 +6,9 @@ Page element binding
 ***/
 
 /* use jQuery mobile page event as trigger for animation */
-$('[data-role="page"]')	.on('pageshow', toggleFooter);
+$('#front_page')	.on('pagehide', footerControls().down);
 
+$('[data-role="page"]').not('#front_page')	.on('pageshow', footerControls().down);
 
 //Video popup handlers
 					//Play video when popup appears

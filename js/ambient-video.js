@@ -12,6 +12,8 @@ function initAmbientState(){
 	//init animations
 	ambientMenu.classList.remove("ambient-state-off");
 	universalFooter.classList.remove("menu-ambient-off");
+	universalFooter.classList.remove("universalFooter-down");
+	universalFooter.classList.remove("universalFooter-up");
 	if ($.mobile.activePage[0].id == 'front_page'){	
 		universalFooter.classList.add("menu-ambient-state");
 	} else {
