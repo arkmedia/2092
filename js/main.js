@@ -51,7 +51,7 @@ for (i=0;i<subHeads.length;i++){
 	
 // bind action to all "back buttons"
 for (i=0;i<backButtons.length;i++){
-	//backButtons[i].addEventListener('mousedown', backOnePage, false);
+	backButtons[i].addEventListener('mousedown', backOnePage, false);
 	backButtons[i].addEventListener('touchstart', backOnePage, false);
 }
 	
@@ -225,7 +225,7 @@ for (i=0;i<footerMenus.length;i++){
 	/* attach appropriate mouse and touch handlers to footer buttons */
 	for (h=0;h<thisFooterMenu.footerButtonsLength;h++){
 		var elem = thisFooterMenu.footerButtons[h];
-		//elem.addEventListener('mousedown',goToNextFooterSubMenu);
+		elem.addEventListener('mousedown',goToNextFooterSubMenu);
 		elem.addEventListener('touchstart',goToNextFooterSubMenu);
 	}
 }

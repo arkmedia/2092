@@ -36,12 +36,12 @@ $('.hycmad_input').on('focus', function(){
 });
  
 //close popup on cancel 
-$('.hycmad_cancel').on('touchstart', function(){	
+$('.hycmad_cancel').on('touchstart mousedown', function(){	
 	$('.popup-form').popup('close');
 });
 
 //How you can make a difference form submit button handler
-$('.hycmad_submit').on('touchstart', function(){
+$('.hycmad_submit').on('touchstart mousedown', function(){
 	var form = $(this).closest('form'), //get form
 		popup = form.closest('[data-role="popup"]'), //get popup
 		data = form.serialize(), //get field values
