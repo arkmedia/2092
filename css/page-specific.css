@@ -419,6 +419,25 @@
 	margin:158px 120px 30px 120px;
 }
 
+#kathy_hospice_history .text-container > div:first-child{
+	display:table-cell; 
+	width: 45%; 
+	text-align:left; 
+	vertical-align: top;
+}
+
+
+#kathy_hospice_history .history_images > div{
+	display: table;
+	padding-left: 10px;
+}
+
+#kathy_hospice_history .history_images > div > div{
+	display: table-cell;
+	width: 50%;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
 	
 /* The Kathy Hospice Donors */
 #kathy_hospice_donor .title_header{
