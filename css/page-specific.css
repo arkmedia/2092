@@ -402,10 +402,23 @@
 	}
 	
 #kathy_hospice_history .menu-content li{
-	height:300px;
-	margin-top: 100px;
+	height:190px;
+	margin-top: 25px;
 	}
-	
+
+#kathy_hospice_history.page_style_e [data-role="content"] .content-table {
+  height: 300px;
+}	
+
+#kathy_hospice_history.page_style_e [data-role="content"] table.content-table td{
+	vertical-align: middle;
+}
+
+#kathy_hospice_history .text-container{
+	display:table; 
+	margin:158px 120px 30px 120px;
+}
+
 	
 /* The Kathy Hospice Donors */
 #kathy_hospice_donor .title_header{
