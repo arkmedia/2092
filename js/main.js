@@ -52,7 +52,7 @@ for (i=0;i<subHeads.length;i++){
 // bind action to all "back buttons"
 for (i=0;i<backButtons.length;i++){
 	backButtons[i].addEventListener('mousedown', backOnePage, false);
-	backButtons[i].addEventListener('touchstart', backOnePage, false);
+	//backButtons[i].addEventListener('touchstart', backOnePage, false);
 }
 	
 // init donors lists
@@ -226,7 +226,7 @@ for (i=0;i<footerMenus.length;i++){
 	for (h=0;h<thisFooterMenu.footerButtonsLength;h++){
 		var elem = thisFooterMenu.footerButtons[h];
 		elem.addEventListener('mousedown',goToNextFooterSubMenu);
-		elem.addEventListener('touchstart',goToNextFooterSubMenu);
+		//elem.addEventListener('touchstart',goToNextFooterSubMenu);
 	}
 }
 

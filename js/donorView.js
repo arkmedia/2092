@@ -42,7 +42,7 @@ donorView.prototype = {
 			button.siblings = donorGridButtons;
 			button.target = container.querySelector('[data-list="' + button.getAttribute("data-for") + '"]'); //this donor categorie's list	
 			button.addEventListener('mouseover', self.donorGridButtonAction, false);
-			button.addEventListener('touchstart', self.donorGridButtonAction, false);
+			//button.addEventListener('touchstart', self.donorGridButtonAction, false);
 		}
 
 		// make sure that top category gets top billing on page show

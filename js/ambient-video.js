@@ -3,9 +3,9 @@
 
 
 function initAmbientState(){
-	document.body.removeEventListener('touchstart', resetAmbientTimer);
+	/*document.body.removeEventListener('touchstart', resetAmbientTimer);
 	document.body.removeEventListener('touchmove', resetAmbientTimer);
-	document.body.removeEventListener('touchend', resetAmbientTimer);
+	document.body.removeEventListener('touchend', resetAmbientTimer);*/
 	document.body.removeEventListener('mousedown', resetAmbientTimer);
 	document.body.removeEventListener('mousemove', resetAmbientTimer);
 	
@@ -50,9 +50,9 @@ function breakAmbientState(){
 		universalFooter.classList.remove("menu-ambient-state-2");		
 		
 		//bind event to reset ambient timer
-		document.body.addEventListener('touchstart', resetAmbientTimer, false);
+		/*document.body.addEventListener('touchstart', resetAmbientTimer, false);
 		document.body.addEventListener('touchmove', resetAmbientTimer, false);
-		document.body.addEventListener('touchend', resetAmbientTimer, false);
+		document.body.addEventListener('touchend', resetAmbientTimer, false);*/
 		document.body.addEventListener('mousedown', resetAmbientTimer, false);
 		document.body.addEventListener('mousemove', resetAmbientTimer, false);
 		resetAmbientTimer();
@@ -60,7 +60,7 @@ function breakAmbientState(){
 	}, ambientAnimations.menuDown);
 }	
 
-ambientTouch.addEventListener('touchstart', breakAmbientState, false);
+//ambientTouch.addEventListener('touchstart', breakAmbientState, false);
 ambientTouch.addEventListener('mousedown', breakAmbientState, false);
 
 
