@@ -1,46 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* fonts */
-
-@font-face{
-	font-family: TradeGothicLT;
-	src:url(../fonts/TradeGothic-LT.ttf);
-	}
-
-@font-face{
-	font-family: TradeGothicLT_Bold;
-	src:url(../fonts/TradeGothic-LT-Bold.ttf);
-	}
-
-
-@font-face{
-	font-family: AGaramond_Regular;
-	src:url(../fonts/AGaramond-Regular.ttf);
-	}
-
-@font-face{
-	font-family: AGaramond_Italic;
-	src:url(../fonts/AGaramond-Italic.ttf);
-	}
-
-@font-face{
-	font-family: AGaramond_BoldItalic;
-	src:url(../fonts/AGaramond-BoldItalic.ttf);
-	}
-
-@font-face{
-	font-family: AGaramond_SemiBoldItalic;
-	src:url(../fonts/AGaramond-SemiboldItalic.ttf);
-	}
-
-
-*{
-	max-width:1080px;	
-}
-
-
-
 /* body matches HD Screen */
 
 body{
