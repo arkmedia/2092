@@ -3,6 +3,8 @@
 
 /* body matches HD Screen */
 
+*{ max-width: 1024px; }
+
 body{
 	/* size */
 	width:		1080px;

@@ -421,7 +421,7 @@
 
 #kathy_hospice_history .text-container > div:first-child{
 	display:table-cell; 
-	width: 45%; 
+	font-weight: normal;
 	text-align:left; 
 	vertical-align: top;
 }
@@ -429,7 +429,7 @@
 
 #kathy_hospice_history .history_images > div{
 	display: table;
-	padding-left: 10px;
+	padding-left: 36px;
 }
 
 #kathy_hospice_history .history_images > div > div{
