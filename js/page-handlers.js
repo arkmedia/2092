@@ -6,9 +6,10 @@ Page element binding
 ***/
 
 /* use jQuery mobile page event as trigger for animation */
-$('#front_page')	.on('pagehide', footerControls().down);
+//$('#front_page')	.on('pagehide', footerControls().down);
 
-$('[data-role="page"]').not('#front_page')	.on('pageshow', footerControls().down);
+$('[data-role="page"]').not('#front_page')	.on('pageshow', footerControls().down)
+											.on('pageshow', highlightBottomLink);
 
 //Video popup handlers
 					//Play video when popup appears

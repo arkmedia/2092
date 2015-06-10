@@ -94,6 +94,14 @@
 	text-shadow: 	0 2px 10px rgba(0,0,0,0.5);
 	}
 
+
+.universalFooter .main-menu-table-bottom li a.active,
+.universalFooter .footer-items li a.active,
+.universalFooter .footer-nav-sub-menu-item li a.active{
+	color: white !important;
+}
+
+
 .universalFooter .main-menu-table-bottom li a:hover,	
 .universalFooter .footer-nav-sub-menu-item li a:hover,
 .universalFooter .footer-items li a:hover{

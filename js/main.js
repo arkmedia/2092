@@ -5,6 +5,9 @@ var footerRetracted = false, //footer state
 	
 	/* Universal Footer button variables */
 	universalFooter = document.getElementById('universalFooter'),
+
+	// get all universal footer links
+	allLinks = document.querySelectorAll('#universalFooter a'),
 	
 	/* footer content links */
 	footerContentLinks = document.querySelectorAll('.content-footer-links ul'),
@@ -196,6 +199,17 @@ function goToNextFooterSubMenu(event){
 			slideInRight(elem, i);		
 		}
 	}	
+}
+
+function highlightBottomLink( e ){
+	for (i=0; i < allLinks.length; i++){
+		allLinks[i].classList.remove('active');
+		if (allLinks[i].hash.slice(1) === e.target.id){
+			allLinks[i].classList.add('active');
+		}
+	}
+
+
 }
 
 //bind animation to footer menu items
