@@ -129,6 +129,10 @@ a, a:active, a:visited{
 	height:				55px;
 	}
 
+.back-button:hover{
+	background:			url(../images/Header-Button-Arrow_Left-Active-1.png) no-repeat;
+}
+
 .content p{
 	/* if this is removed the split-column
 	content will be uneven **************/
