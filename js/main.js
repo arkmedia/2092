@@ -212,6 +212,37 @@ function highlightBottomLink( e ){
 	}
 }
 
+function resetMenus( e ){
+	// get all lists on page
+	var menuLists =  e.target.getElementsByClassName('menu-lists'),
+		btns = e.target.getElementsByClassName('footer-btn');
+
+	if (menuLists.length){
+		// for each list
+		for (i=0; i<menuLists.length; i++){
+			// get list items
+			var items = menuLists[i].querySelectorAll('[data-cat]');
+			for (h=0; h<items.length; h++){
+				// reset to original position
+				items[h].setAttribute('class', '');
+				if (h>0){
+					items[h].classList.add('gone');
+				}
+			}
+		}
+	}
+
+	if (btns.length){		
+		//hide prev button
+		for (i=0; i<btns.length; i++){
+			btns[i].classList.remove('invisible');
+			if (btns[i].classList.contains('footer-prev-btn')){
+				btns[i].classList.add('invisible');
+			}
+		}
+	}
+}
+
 //bind animation to footer menu items
 for (i=0;i<footerMenus.length;i++){
 		var thisFooterMenu = footerMenus[i];

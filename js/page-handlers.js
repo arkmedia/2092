@@ -9,7 +9,8 @@ Page element binding
 //$('#front_page')	.on('pagehide', footerControls().down);
 
 $('[data-role="page"]').not('#front_page')	.on('pageshow', footerControls().down)
-											.on('pageshow', highlightBottomLink);
+											.on('pageshow', highlightBottomLink)
+											.on('pagehide', resetMenus);
 
 //Video popup handlers
 					//Play video when popup appears
