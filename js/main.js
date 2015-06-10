@@ -134,12 +134,13 @@ function footerControls(){
 		footerRetracted = true;	
 	}
 
-	footerControls.toggle = function(){
+	footerControls.toggle = function(elem){
 		if (!footerRetracted){
 			footerControls.down()
 		} else {
 			footerControls.up();
 		}
+
 	}
 
 	return footerControls;

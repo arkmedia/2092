@@ -19,7 +19,7 @@ body{
 	}
 
 .accelerate{
-	-webkit-transform: translatez(0);
+	-webkit-transform: translateZ(0);
 	}
 
 .iscroll-bottom-spacer{
