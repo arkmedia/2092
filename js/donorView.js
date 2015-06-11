@@ -41,22 +41,27 @@ donorView.prototype = {
 			var button = donorGridButtons[i];
 			button.siblings = donorGridButtons;
 			button.target = container.querySelector('[data-list="' + button.getAttribute("data-for") + '"]'); //this donor categorie's list	
-			button.addEventListener('mouseover', self.donorGridButtonAction, false);
+			button.addEventListener('mousedown', self.donorGridButtonAction, false);
 			//button.addEventListener('touchstart', self.donorGridButtonAction, false);
 		}
 
 		// make sure that top category gets top billing on page show
-		$(page).on('pagebeforeshow', function(e){
-			var firstCat = donorGridButtons[0],
-				siblings = firstCat.siblings;
-			for (h=0;h<siblings.length;h++){
-				var sibling = siblings[h];
-				sibling.target.style.display = 'none';
-				sibling.classList.remove('donor-active'); // remove active donor status on all
-			}
-			firstCat.classList.add('donor-active');
-			firstCat.target.style.display = 'inline-block';
-		});
+			$(page)	.on('pagebeforeshow', function(e){
+						var firstCat = donorGridButtons[0],
+							siblings = firstCat.siblings,
+							target = firstCat.target;
+						for (h=0;h<siblings.length;h++){
+							var sibling = siblings[h];
+							sibling.target.style.display = 'none';
+							sibling.classList.remove('donor-active'); // remove active donor status on all
+						}
+						firstCat.classList.add('donor-active');
+						target.style.display = 'block';
+						if (target.iscrollInitiated == undefined){	
+							setTimeout(function(){target['iscrollInitiated'] = true; $(target).iscrollview('refresh'); }, 500);
+						}
+						
+					});
 	},	
 	donorGridButtonAction: function(event){
 		var self = this,
@@ -74,7 +79,7 @@ donorView.prototype = {
 		target.style.display = 'block'; // display associated list
 		
 		if (target.iscrollInitiated == undefined){
-			target.iscrollInitiated = true;		
+			target['iscrollInitiated'] = true;		
 			$(target).iscrollview('refresh');
 		}
 	}
