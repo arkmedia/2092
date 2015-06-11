@@ -214,8 +214,16 @@ function highlightBottomLink( e ){
 
 function resetMenus( e ){
 	// get all lists on page
-	var menuLists =  e.target.getElementsByClassName('menu-lists'),
-		btns = e.target.getElementsByClassName('footer-btn');
+	var elem = e.target,
+		menuLists =  elem.getElementsByClassName('menu-lists'),
+		btns = elem.getElementsByClassName('footer-btn'),
+		menu = elem.getElementsByClassName('menu-parent');
+
+	if (menu.length){
+		for (i=0; i<menu.length; i++){
+			menu[i].currentFooterButtonCategory = 0;
+		}
+	}
 
 	if (menuLists.length){
 		// for each list
