@@ -204,6 +204,7 @@ function goToNextFooterSubMenu(event){
 function highlightBottomLink( e ){
 	for (i=0; i < allLinks.length; i++){
 		allLinks[i].classList.remove('active');
+		allLinks[i].removeAttribute('class');
 		allLinks[i].removeEventListener('mousedown', footerControls().down);
 		if (allLinks[i].hash.slice(1) === e.target.id){
 			allLinks[i].classList.add('active');
