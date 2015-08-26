@@ -49,19 +49,19 @@ while ($row = fgetcsv($fp)) {
         <li><?php 
 			switch($person){
 			// case Company (last name only)
-			case (($person['firstname'] == '') && ($person['lastname'] != '') && ($person['spousefirstname'] == '') && ($person['spouselastname'] == '')):
+			case (($person['firstname'] == NULL) && ($person['lastname'] != NULL) && ($person['spousefirstname'] == NULL) && ($person['spouselastname'] == NULL)):
 				echo $person['lastname'];
 			break;	
 			// case single donor (only first and last name)
-			case (($person['firstname'] != '') && ($person['lastname'] != '') && ($person['spousefirstname'] == '') && ($person['spouselastname'] == '')):
+			case (($person['firstname'] != NULL) && ($person['lastname'] != NULL) && ($person['spousefirstname'] == NULL) && ($person['spouselastname'] == NULL)):
 				echo $person['firstname'].' '.$person['lastname'];
 			break;	
 			// case couple with matching last names
-			case (($person['firstname'] != '') && ($person['lastname'] != '') && ($person['spousefirstname'] != '') && ($person['spouselastname'] == '')):
+			case (($person['firstname'] != NULL) && ($person['lastname'] != NULL) && ($person['spousefirstname'] != NULL) && ($person['spouselastname'] == NULL)):
 				echo $person['firstname'].' and '.$person['spousefirstname'].' '.$person['lastname'];
 			break;	
 			// case couple with differing last names
-			case (($person['firstname'] != '') && ($person['lastname'] != '') && ($person['spousefirstname'] != '') && ($person['spouselastname'] != '')):
+			case (($person['firstname'] != NULL) && ($person['lastname'] != NULL) && ($person['spousefirstname'] != NULL) && ($person['spouselastname'] != NULL)):
 				echo $person['firstname'].' '.$person['lastname'].' and '.$person['spousefirstname'].' '.$person['spouselastname'];
 			break;	
 			}
