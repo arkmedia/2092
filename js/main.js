@@ -7,7 +7,7 @@ var footerRetracted = false, //footer state
 	universalFooter = document.getElementById('universalFooter'),
 
 	// get all universal footer links
-	allLinks = document.querySelectorAll('#universalFooter a'),
+	allLinks = document.querySelectorAll('#universalFooter ul a'),
 	
 	/* footer content links */
 	footerContentLinks = document.querySelectorAll('.content-footer-links ul'),
@@ -205,7 +205,8 @@ function highlightBottomLink( e ){
 	for (i=0; i < allLinks.length; i++){
 		allLinks[i].classList.remove('active');
 		allLinks[i].removeAttribute('class');
-		allLinks[i].removeEventListener('mousedown', footerControls().down);
+		//allLinks[i].removeEventListener('mousedown', footerControls().down);
+		allLinks[i].removeEventListener('touchstart', footerControls().down);
 		if (allLinks[i].hash.slice(1) === e.target.id){
 			allLinks[i].classList.add('active');
 			//allLinks[i].addEventListener('mousedown', footerControls().down);
