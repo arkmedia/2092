@@ -126,15 +126,18 @@ function footerControls(){
 	}
 
 	footerControls.down = function(){
-		//initate footer down animation
-		universalFooter.classList.add('universalFooter-down');
-		//clear ambien classes if they're in place
-		universalFooter.classList.remove('menu-ambient-off');
-		universalFooter.classList.remove('menu-ambient-state');
-		//clear up state
-		universalFooter.classList.remove('universalFooter-up');	
+		setTimeout(function(){
+			//initate footer down animation
+			universalFooter.classList.add('universalFooter-down');
+			//clear ambien classes if they're in place
+			universalFooter.classList.remove('menu-ambient-off');
+			universalFooter.classList.remove('menu-ambient-state');
+			//clear up state
+			universalFooter.classList.remove('universalFooter-up');	
 
-		footerRetracted = true;	
+			footerRetracted = true;	
+		}, 300);
+			
 	}
 
 	footerControls.toggle = function(elem){
@@ -203,14 +206,14 @@ function goToNextFooterSubMenu(event){
 
 function highlightBottomLink( e ){
 	for (i=0; i < allLinks.length; i++){
-		allLinks[i].classList.remove('active');
-		allLinks[i].removeAttribute('class');
-		//allLinks[i].removeEventListener('mousedown', footerControls().down);
-		allLinks[i].removeEventListener('touchstart', footerControls().down);
-		if (allLinks[i].hash.slice(1) === e.target.id){
+		if (allLinks[i].classList.contains('active')){
+			allLinks[i].classList.remove('active');
+			allLinks[i].removeEventListener('touchstart', footerControls().down);
+			//allLinks[i].removeEventListener('mousedown', footerControls().down);	
+		} else if (allLinks[i].hash.slice(1) === e.target.id){
 			allLinks[i].classList.add('active');
-			//allLinks[i].addEventListener('mousedown', footerControls().down);
 			allLinks[i].addEventListener('touchstart', footerControls().down);
+			//allLinks[i].addEventListener('mousedown', footerControls().down);
 		}
 	}
 }
